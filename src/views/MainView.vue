@@ -50,7 +50,7 @@
   </div>
 
   <div class="section__hotel wow fadeIn">
-    <div class="section__hotel__content _container">
+    <div class="section__hotel__content">
       <div class="section__hotel__row">
         <div class="section__hotel__item">
           <HotelSlider />
@@ -68,7 +68,7 @@
   </div>
 
   <div class="section__impression">
-    <div class="section__impression__content _container">
+    <div class="section__impression__content">
       <div class="section__row">
         <div class="section__impression__item">
           <div class="section__title">

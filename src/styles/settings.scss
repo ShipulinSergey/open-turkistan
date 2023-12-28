@@ -321,6 +321,9 @@ $md4: 479.98px;
   width: 100%;
   max-width: 485px;
   margin-left: 40px;
+  @media (max-width: $md2) {
+    margin-left: 0;
+  }
 }
 
 .section__header {
@@ -790,6 +793,8 @@ $md4: 479.98px;
     padding: 10px;
   }
   &__content {
+    width: 100%;
+    max-width: 1380px;
     border-radius: 64px;
     background: linear-gradient(
         90deg,
@@ -918,4 +923,16 @@ $md4: 479.98px;
   .swiper-button-next::after {
     color: var(--secondary-color);
   }
+}
+
+.section__hotel .swiper-button-prev {
+  left: 50px !important;
+}
+
+.section__impression .swiper-button-next {
+  right: 100px;
+}
+
+.section__impression .swiper-button-prev {
+  left: 100px;
 }

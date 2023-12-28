@@ -4,6 +4,7 @@
       <swiper
         :slides-per-view="computedSlidesPerView"
         :space-between="20"
+        :slidesPerView="4"
         :navigation="{
           prevEl: prev,
           nextEl: next,
@@ -125,3 +126,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.swiper-slide {
+  width: 386px !important;
+}
+</style>
