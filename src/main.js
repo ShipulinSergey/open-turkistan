@@ -19,6 +19,8 @@ import { createI18n } from "vue-i18n";
 import ru from "./locales/ru.json";
 import kz from "./locales/kz.json";
 
+import store from './store';
+
 const messages = {
   ru,
   kz,
@@ -34,4 +36,5 @@ const app = createApp(App);
 
 registerPlugins(app);
 app.use(i18n);
+app.use(store);
 app.mount("#app");

@@ -1,15 +1,13 @@
 <template>
   <MenuComponent />
   <div class="section__header wow fadeIn">
-    <div class="section__header__content _container">
+    <div class="section__header__content">
       <div class="section__header__row" v-animate-onscroll="'animated flip'">
-        <a href="#welcome" class="section__header__item">
-          <img src="@/assets/header/main__bg.png" alt="" />
-          <div class="play__btn">
-            <img src="@/assets/icons/play.svg" alt="" />
-          </div>
-        </a>
-
+        <div class="section__header__item">
+          <video width="100%" autoplay loop muted>
+            <source src="@\assets\Видео\1.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="section__header__item">
           <h2 class="section__header__item__title section__title">
             Welcome to <span>Turkistan</span>
@@ -28,8 +26,8 @@
   </div>
 
   <div class="section__destination">
-    <div class="section__destination__content _container">
-      <div class="section__row">
+    <div class="section__destination__content">
+      <div class="section__row _container">
         <div class="section__destination__item">
           <h2 class="section__title">
             {{ $t("destination__title__1") }}
@@ -46,7 +44,7 @@
   </div>
 
   <div class="section__hotel wow fadeIn">
-    <div class="section__hotel__content _container">
+    <div class="section__hotel__content" style="max-width: 1300px;">
       <div class="section__hotel__row">
         <div class="section__hotel__item">
           <HotelSlider />
@@ -64,8 +62,8 @@
   </div>
 
   <div class="section__impression">
-    <div class="section__impression__content _container">
-      <div class="section__row">
+    <div class="section__impression__content">
+      <div class="section__row _container">
         <div class="section__impression__item">
           <div class="section__title">
             {{ $t("impression__title__1") }}

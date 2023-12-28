@@ -23,11 +23,12 @@
                 id="close-icon"
               ></span>
             </button>
-            <h1 class="site-identity-logo">
-              Open <br />
-              <span>Turkistan</span>
-            </h1>
+            
             <section class="navigation-menu__labels nav">
+              <h1 class="site-identity-logo">
+                Open <br />
+                <span>Turkistan</span>
+              </h1>
               <a class="nav__link" href="#section__menu" type="button">{{
                 $t("nav__link__1")
               }}</a>
@@ -44,10 +45,8 @@
                 $t("nav__link__5")
               }}</a>
             </section>
-            <div style="display: flex">
-              <ThemeComponent />
-              <LanguageComponent />
-            </div>
+            <ThemeComponent />
+            <LanguageComponent />
           </div>
         </div>
       </nav>

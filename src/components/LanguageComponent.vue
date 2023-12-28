@@ -1,34 +1,33 @@
 <template>
   <div class="section__select">
-    <select id="languageSelect" v-model="lang" @change="setLanguagePreference">
-      <option value="ru">RU</option>
-      <option value="kz">KZ</option>
-    </select>
-    <svg
-      id="test"
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-    >
-      <path
-        d="M18.6667 6.66667L10 16L1.33337 6.66667"
-        stroke="white"
-        stroke-linecap="square"
-      />
-    </svg>
+    <v-select
+      v-model="lang"
+      :items="['RU', 'KZ']"
+      variant="solo"
+      class="elevation-0"
+      density="compact"
+      hide-details
+      flat
+      :bg-color="theme === 'dark' ? 'black' : 'white'"
+      :theme="theme === 'dark' ? 'dark' : 'iight'"
+      menu-icon="mdi-chevron-down"
+    ></v-select>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
   data() {
     return {
-      lang: "ru",
+      lang: "RU",
     };
   },
-
+  computed: {
+    ...mapState({
+      theme: (state) => state.theme
+    })
+  },
   methods: {
     setLanguagePreference() {
       localStorage.setItem("currentLanguage", this.lang);

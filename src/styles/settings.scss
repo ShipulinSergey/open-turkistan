@@ -21,7 +21,7 @@ body {
 // Переменные для блока
 $minWidth: 320px;
 $maxWidth: 1152px;
-$maxWidthCon: 1144px;
+$maxWidthCon: 1240px;
 $md1: $maxWidthCon + 12;
 $md2: 991.98px;
 $md3: 767.98px;
@@ -92,6 +92,7 @@ $md4: 479.98px;
   font-weight: 400;
   line-height: 24px; /* 150% */
   margin: 40px 0;
+  padding-right: 140px;
 
   @media (max-width: $md3) {
     font-size: 14px;
@@ -108,27 +109,13 @@ $md4: 479.98px;
     color: var(--secondary-color);
     font-size: 30px;
   }
-
-  button {
-    border: 0;
-    padding: 0;
-    background: transparent;
-    color: inherit;
-    font-family: inherit;
-    cursor: pointer;
-    font-size: 16px;
-    img {
-      width: 30px;
-    }
-  }
-
   .navigation-menu {
     min-width: 100%;
     height: 80px;
     margin: 0;
     padding: 0;
     position: fixed;
-    z-index: 999999999;
+    z-index: 2;
 
     top: 0;
     left: 0;
@@ -204,12 +191,12 @@ $md4: 479.98px;
   .site-identity-logo {
     margin: 0;
     padding: 0;
-    text-align: center;
     cursor: pointer;
     font-size: 16px;
     text-transform: uppercase;
     font-family: "Eagle Lake", serif;
     color: var(--secondary-color);
+    font-weight: 400;
     span {
       color: $orange;
     }
@@ -220,16 +207,17 @@ $md4: 479.98px;
     visibility: hidden;
     z-index: 3;
     top: 80px;
-    width: 50%;
     height: auto;
     padding: 10px 20px;
     display: flex;
-    gap: 16px;
+    gap: 32px;
     flex-direction: column;
     align-items: flex-start;
     background: var(--primary-color);
     transition: translate 0.3s;
     translate: -100% 0;
+    display: flex;
+    align-items: center;
     :hover {
       color: $orange;
     }
@@ -295,6 +283,13 @@ $md4: 479.98px;
 .section__theme {
   margin-right: 10px;
   &__btn {
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    width: 48px;
+    height: 24px;
   }
   &__icon {
     font-size: 20px;
@@ -311,10 +306,9 @@ $md4: 479.98px;
   }
   &__row {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 40px;
     @media (max-width: $md2) {
       flex-direction: column-reverse;
     }
@@ -457,13 +451,13 @@ $md4: 479.98px;
   }
 
   .swiper-button-prev {
-    left: -50px;
+    left: 50px;
     @media (max-width: $md1) {
       left: 0px;
     }
   }
   .swiper-button-next {
-    right: -50px;
+    right: 50px;
     @media (max-width: $md1) {
       right: 0px;
     }
@@ -555,7 +549,7 @@ $md4: 479.98px;
 
   .swiper-button-prev::after,
   .swiper-button-next::after {
-    color: var(--secondary-color);
+    color: #FFFFFF;
   }
 }
 
@@ -761,7 +755,7 @@ $md4: 479.98px;
     padding: 10px;
   }
   &__content {
-    border-radius: 64px;
+    border-radius: 0 64px 64px 0;
     background: linear-gradient(
         90deg,
         #000 20.45%,
@@ -772,7 +766,7 @@ $md4: 479.98px;
 
     background-position: 50%;
     padding: 50px 0;
-    border-radius: 64px;
+    border-radius: 0 64px 64px 0;
     @media (max-width: $md2) {
       background: linear-gradient(
           0deg,
@@ -887,6 +881,6 @@ $md4: 479.98px;
 
   .swiper-button-prev::after,
   .swiper-button-next::after {
-    color: var(--secondary-color);
+    color: #FFFFFF;
   }
 }
