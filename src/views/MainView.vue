@@ -1,26 +1,30 @@
 <template>
   <MenuComponent />
   <div class="section__header wow fadeIn">
-    <div class="section__header__content _container">
+    <div class="section__header__content">
       <div class="section__header__row" v-animate-onscroll="'animated flip'">
-        <a href="#welcome" class="section__header__item">
-          <img src="@/assets/header/main__bg.png" alt="" />
-          <div class="play__btn">
-            <img src="@/assets/icons/play.svg" alt="" />
-          </div>
-        </a>
+        <div class="section__header__left_content">
+          <a href="#welcome" class="section__header__item">
+            <img src="@/assets/header/main__bg.png" alt="" />
+            <div class="play__btn">
+              <img src="@/assets/icons/play.svg" alt="" />
+            </div>
+          </a>
+        </div>
 
-        <div class="section__header__item">
-          <h2 class="section__header__item__title section__title">
-            Welcome to <span>Turkistan</span>
-          </h2>
-          <p class="section__header__item__subtitle section__subtitle">
-            {{ $t("header__subtitle") }}
-          </p>
-          <div class="section__header__item__social">
-            <a href=""><span class="mdi mdi-instagram"></span></a>
-            <a href=""><span class="mdi mdi-facebook"></span></a>
-            <a href=""><span class="mdi mdi-youtube"></span></a>
+        <div class="section__header__right_content">
+          <div class="section__header__item">
+            <h2 class="section__header__item__title section__title">
+              Welcome to <span>Turkistan</span>
+            </h2>
+            <p class="section__header__item__subtitle section__subtitle">
+              {{ $t("header__subtitle") }}
+            </p>
+            <div class="section__header__item__social">
+              <a href=""><span class="mdi mdi-instagram"></span></a>
+              <a href=""><span class="mdi mdi-facebook"></span></a>
+              <a href=""><span class="mdi mdi-youtube"></span></a>
+            </div>
           </div>
         </div>
       </div>
@@ -28,7 +32,7 @@
   </div>
 
   <div class="section__destination">
-    <div class="section__destination__content _container">
+    <div class="section__destination__content">
       <div class="section__row">
         <div class="section__destination__item">
           <h2 class="section__title">
