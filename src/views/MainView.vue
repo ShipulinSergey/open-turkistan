@@ -33,7 +33,7 @@
 
   <div class="section__destination">
     <div class="section__destination__content">
-      <div class="section__row">
+      <div class="section__row _container">
         <div class="section__destination__item">
           <h2 class="section__title">
             {{ $t("destination__title__1") }}
@@ -69,7 +69,7 @@
 
   <div class="section__impression">
     <div class="section__impression__content">
-      <div class="section__row">
+      <div class="section__row _container">
         <div class="section__impression__item">
           <div class="section__title">
             {{ $t("impression__title__1") }}
