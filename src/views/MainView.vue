@@ -5,7 +5,7 @@
       <div class="section__header__row" v-animate-onscroll="'animated flip'">
         <div class="section__header__item">
           <video width="100%" autoplay loop muted>
-            <source src="@\assets\Видео\1.mp4" type="video/mp4">
+            <!-- <source src="@\assets\Видео\1.mp4" type="video/mp4"> -->
           </video>
         </div>
         <div class="section__header__item">
