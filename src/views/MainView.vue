@@ -4,9 +4,15 @@
     <div class="section__header__content">
       <div class="section__header__row" v-animate-onscroll="'animated flip'">
         <div class="section__header__item">
-          <video width="100%" autoplay loop muted>
-            <!-- <source src="@\assets\Видео\1.mp4" type="video/mp4"> -->
-          </video>
+          <iframe
+            :src="videoUrl"
+            width="100%"
+            height="480px"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            @ended="handleVideoEnded"
+          ></iframe>
         </div>
         <div class="section__header__item">
           <h2 class="section__header__item__title section__title">
@@ -44,13 +50,13 @@
   </div>
 
   <div class="section__hotel wow fadeIn">
-    <div class="section__hotel__content" style="max-width: 1300px;">
+    <div class="section__hotel__content">
       <div class="section__hotel__row">
         <div class="section__hotel__item">
           <HotelSlider />
         </div>
         <div class="section__hotel__item">
-          <h2 class="section__hotel__item__title section__title">
+          <h2 class="section__hotel__item__title section__title" style="color: #FFF;">
             Гостиницы и места проживания
           </h2>
           <button class="section__hotel__item__action regular__btn">
@@ -92,20 +98,11 @@
           </p>
 
           <form action="" class="section__feedback__item__form">
-            <input
-              type="text"
-              class="section__feedback__item__form__input"
-              :placeholder="this.$t('feedback__input__1')"
-            />
-            <input
-              type="text"
-              class="section__feedback__item__form__input"
-              :placeholder="this.$t('feedback__input__2')"
-            />
-            <button
-              type="submit"
-              class="section__feedback__item__form__submit regular__btn"
-            >
+            <input type="text" class="section__feedback__item__form__input"
+              :placeholder="this.$t('feedback__input__1')" />
+            <input type="text" class="section__feedback__item__form__input"
+              :placeholder="this.$t('feedback__input__2')" />
+            <button type="submit" class="section__feedback__item__form__submit regular__btn">
               {{ $t("feedback__action") }}
             </button>
           </form>
@@ -178,7 +175,19 @@ export default {
     HotelSlider,
     FooterComponent,
   },
-  methods: {},
+  data() {
+    return {
+      videoUrl: "https://www.youtube.com/embed/BhgCBgTn_RQ?autoplay=1&mute=1&controls=0",
+    };
+  },
+  methods: {
+    handleVideoEnded() {
+      console.log('end');
+      // Reset the video playback to the beginning and play again
+      this.$refs.video.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[0,"true"]}', '*');
+      this.$refs.video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    },
+  },
 };
 </script>
 

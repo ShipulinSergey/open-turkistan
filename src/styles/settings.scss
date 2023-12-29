@@ -92,8 +92,6 @@ $md4: 479.98px;
   font-weight: 400;
   line-height: 24px; /* 150% */
   margin: 40px 0;
-  padding-right: 140px;
-
   @media (max-width: $md3) {
     font-size: 14px;
     margin: 10px 0;
@@ -309,14 +307,21 @@ $md4: 479.98px;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    max-width: calc(100% - (100% - $maxWidthCon) / 2);
     @media (max-width: $md2) {
       flex-direction: column-reverse;
+      padding: 0 20px;
     }
   }
 
   &__item {
     width: 47%;
     position: relative;
+    iframe {
+      @media (max-width: $md3) {
+        height: 200px;
+      }
+    }
     @media (max-width: $md2) {
       width: 100%;
       margin-bottom: 20px;
@@ -754,6 +759,7 @@ $md4: 479.98px;
   }
   &__content {
     border-radius: 0 64px 64px 0;
+    max-width: calc(100% - (100% - $maxWidthCon) / 2);
     background: linear-gradient(
         90deg,
         #000 20.45%,
@@ -761,7 +767,8 @@ $md4: 479.98px;
         rgba(0, 0, 0, 0.33) 99.98%
       ),
       url("@/assets/hotel/main__bg.png"), lightgray 50% / cover no-repeat;
-
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: 50%;
     padding: 50px 0;
     border-radius: 0 64px 64px 0;
@@ -818,11 +825,13 @@ $md4: 479.98px;
     }
     &__content {
       position: relative;
+      
       img {
         width: 100%;
         height: 328px;
         object-fit: cover;
         border-radius: 32px;
+        filter: brightness(50%);
       }
       &__bg {
         position: absolute;
@@ -865,15 +874,15 @@ $md4: 479.98px;
   }
 
   .swiper-button-prev {
-    left: -50px;
+    left: 0px;
     @media (max-width: $md1) {
-      left: 0px;
+      left: 15px;
     }
   }
   .swiper-button-next {
     right: -50px;
     @media (max-width: $md1) {
-      right: 0px;
+      right: 15px;
     }
   }
 
