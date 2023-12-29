@@ -1,17 +1,8 @@
 <template>
   <div class="section__select">
-    <v-select
-      v-model="lang"
-      :items="['RU', 'KZ']"
-      variant="solo"
-      class="elevation-0"
-      density="compact"
-      hide-details
-      flat
-      :bg-color="theme === 'dark' ? 'black' : 'white'"
-      :theme="theme === 'dark' ? 'dark' : 'iight'"
-      menu-icon="mdi-chevron-down"
-    ></v-select>
+    <v-select v-model="lang" :items="['RU', 'KZ']" variant="solo" class="elevation-0" density="compact" hide-details flat
+      :bg-color="theme === 'dark' ? 'black' : 'white'" :theme="theme === 'dark' ? 'dark' : 'light'"
+      menu-icon="mdi-chevron-down" @change="changeLanguage"></v-select>
   </div>
 </template>
 
@@ -27,6 +18,11 @@ export default {
     ...mapState({
       theme: (state) => state.theme
     })
+  },
+  watch: {
+    lang () {
+      this.setLanguagePreference()
+    }
   },
   methods: {
     setLanguagePreference() {

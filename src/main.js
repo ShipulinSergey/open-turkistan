@@ -16,19 +16,19 @@ import { createApp } from "vue";
 import { createI18n } from "vue-i18n";
 
 //npm install vue-i18n@next
-import ru from "./locales/ru.json";
-import kz from "./locales/kz.json";
+import RU from "./locales/ru.json";
+import KZ from "./locales/kz.json";
 
 import store from './store';
 
 const messages = {
-  ru,
-  kz,
+  RU,
+  KZ,
 };
 
 const i18n = createI18n({
-  locale: "ru",
-  fallbackLocale: "ru",
+  locale: "RU",
+  fallbackLocale: "RU",
   messages,
 });
 

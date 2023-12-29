@@ -25,7 +25,7 @@
             </button>
             
             <section class="navigation-menu__labels nav">
-              <h1 class="site-identity-logo">
+              <h1 class="site-identity-logo" @click="goTo('/')">
                 Open <br />
                 <span>Turkistan</span>
               </h1>
@@ -35,9 +35,8 @@
               <a class="nav__link" href="#gallery" type="button">{{
                 $t("nav__link__2")
               }}</a>
-              <a class="nav__link" href="#features" type="button">{{
-                $t("nav__link__3")
-              }}</a>
+              <router-link class="nav__link" to="/destination">{{ $t("nav__link__3") }}</router-link>
+
               <a class="nav__link" href="#testimonials" type="button">{{
                 $t("nav__link__4")
               }}</a>
@@ -63,6 +62,9 @@ export default {
     ThemeComponent,
   },
   methods: {
+    goTo (path) {
+      this.$router.push(path)
+    },
     toggleMenuClicked() {
       const body = document.getElementById("section__menu");
       const openIcon = document.getElementById("open-icon");
