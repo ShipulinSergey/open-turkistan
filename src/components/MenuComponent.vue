@@ -29,9 +29,9 @@
                 Open <br />
                 <span>Turkistan</span>
               </h1>
-              <a class="nav__link" href="#section__menu" type="button">{{
+              <router-link class="nav__link"  to="/about"> {{
                 $t("nav__link__1")
-              }}</a>
+              }}</router-link>
               <a class="nav__link" href="#gallery" type="button">{{
                 $t("nav__link__2")
               }}</a>

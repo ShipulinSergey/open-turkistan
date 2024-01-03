@@ -108,7 +108,7 @@ $md4: 479.98px;
     font-size: 30px;
   }
   .navigation-menu {
-    min-width: 100%;
+    width: 100%;
     height: 80px;
     margin: 0;
     padding: 0;
@@ -122,6 +122,10 @@ $md4: 479.98px;
     justify-content: center;
     background: var(--primary-color);
     color: #f9f9f9;
+    @media (max-width: $md1) {
+      padding: 0;
+      margin: 0;
+    }
   }
 
   .navigation__body {
@@ -229,8 +233,13 @@ $md4: 479.98px;
       text-align: right;
       width: 100%;
       white-space: nowrap;
+      @media (max-width: 1024px) {
+        font-size: 14px;
+      }
     }
-
+    @media (max-width: 1024px) {
+      gap: 25px;
+    }
     @media only screen and (max-width: 768px) {
       padding: 10px;
       width: 300px;
