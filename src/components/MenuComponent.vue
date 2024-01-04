@@ -32,9 +32,9 @@
               <router-link class="nav__link"  to="/about"> {{
                 $t("nav__link__1")
               }}</router-link>
-              <a class="nav__link" href="#gallery" type="button">{{
+              <router-link class="nav__link"  to="/accommodation"> {{
                 $t("nav__link__2")
-              }}</a>
+              }}</router-link>
               <router-link class="nav__link" to="/destination">{{ $t("nav__link__3") }}</router-link>
 
               <a class="nav__link" href="#testimonials" type="button">{{
