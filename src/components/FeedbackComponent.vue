@@ -13,9 +13,9 @@
 
           <form action="" class="section__feedback__item__form">
             <input type="text" class="section__feedback__item__form__input"
-              :placeholder="this.$t('feedback__input__1')" />
+              :placeholder="$t('feedback__input__1')" />
             <input type="text" class="section__feedback__item__form__input"
-              :placeholder="this.$t('feedback__input__2')" />
+              :placeholder="$t('feedback__input__2')" />
             <button type="submit" class="section__feedback__item__form__submit regular__btn">
               {{ $t("feedback__action") }}
             </button>
