@@ -4,42 +4,30 @@
       <nav class="navigation-menu">
         <div class="navigation__body _container">
           <div class="navigation__body__row">
-            <div
-              class="navigation-menu__overlay"
-              @click="toggleMenuClicked()"
-            ></div>
-            <button
-              type="button"
-              class="hamburger-menu"
-              @click="toggleMenuClicked()"
-            >
-              <span
-                class="mdi mdi-menu section__menu__icons"
-                id="open-icon"
-              ></span>
+            <div class="navigation-menu__overlay" @click="toggleMenuClicked()"></div>
+            <button type="button" class="hamburger-menu" @click="toggleMenuClicked()">
+              <span class="mdi mdi-menu section__menu__icons" id="open-icon"></span>
 
-              <span
-                class="mdi mdi-window-close section__menu__icons"
-                id="close-icon"
-              ></span>
+              <span class="mdi mdi-window-close section__menu__icons" id="close-icon"></span>
             </button>
-            
+
             <section class="navigation-menu__labels nav">
               <h1 class="site-identity-logo" @click="goTo('/')">
                 Open <br />
                 <span>Turkistan</span>
               </h1>
-              <router-link class="nav__link"  to="/about"> {{
+              <router-link class="nav__link" to="/about"> {{
                 $t("nav__link__1")
               }}</router-link>
-              <router-link class="nav__link"  to="/accommodation"> {{
+              <router-link class="nav__link" to="/accommodation"> {{
                 $t("nav__link__2")
               }}</router-link>
-              <router-link class="nav__link" to="/destination">{{ $t("nav__link__3") }}</router-link>
-
-              <a class="nav__link" href="#testimonials" type="button">{{
+              <router-link class="nav__link" to="/destination">{{
+                $t("nav__link__3")
+              }}</router-link>
+              <router-link class="nav__link" to="/opentv">{{
                 $t("nav__link__4")
-              }}</a>
+              }}</router-link>
               <a class="nav__link" href="#feedback" type="button">{{
                 $t("nav__link__5")
               }}</a>
@@ -62,7 +50,7 @@ export default {
     ThemeComponent,
   },
   methods: {
-    goTo (path) {
+    goTo(path) {
       this.$router.push(path)
     },
     toggleMenuClicked() {

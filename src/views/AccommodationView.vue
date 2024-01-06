@@ -75,7 +75,7 @@
     import FooterComponent from '@/components/FooterComponent.vue';
     import FeedbackComponent from '@/components/FeedbackComponent.vue';
     import MenuComponent from '@/components/MenuComponent.vue';
-    </script>
+  </script>
 
   <style lang="scss">
     .accom {
@@ -203,7 +203,7 @@
           width: 29px!important;
           height: 34px!important;
           padding: 5px 10px;
-          border-radius: 8px;
+          border-radius: 8px!important;
           background: #C4C4C4;
           span {
             color: #FFF;

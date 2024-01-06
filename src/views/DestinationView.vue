@@ -96,6 +96,7 @@ import MenuComponent from '@/components/MenuComponent.vue';
       overflow: hidden;
       height: 295px;
       position: relative;
+      cursor: pointer;
       @media (max-width: 1252px) {
         height: 250px;
       }

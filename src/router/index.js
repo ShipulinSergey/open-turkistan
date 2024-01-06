@@ -29,6 +29,11 @@ const routes = [
         name: 'Accommodation',
         component: () => import('@/views/AccommodationView.vue'),
       },
+      {
+        path: 'opentv',
+        name: 'Opentv',
+        component: () => import('@/views/OpenTVView.vue'),
+      },
     ],
   },
 ]
