@@ -4,42 +4,43 @@
     <div class="destination__title">{{ $t("destination__title") }}</div>
     <div class="destination__body">{{ $t("destination__body") }}</div>
     <div class="destination__grid">
-      <div class="destination__grid__item">
+      <router-link to="destination/1" class="destination__grid__item">
         <img src="@\assets\destination\p1.png" alt="">
         <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </div>
-      <div class="destination__grid__item">
+      </router-link>
+      <router-link to="destination/2" class="destination__grid__item">
         <img src="@\assets\destination\p2.png" alt="">
         <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </div>
-      <div class="destination__grid__item">
+      </router-link>
+      <router-link to="destination/3" class="destination__grid__item">
         <img src="@\assets\destination\p3.png" alt="">
         <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </div>
-      <div class="destination__grid__item">
+      </router-link>
+      <router-link to="destination/4" class="destination__grid__item">
         <img src="@\assets\destination\p4.png" alt="">
         <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </div>
-      <div class="destination__grid__item">
+      </router-link>
+      <router-link to="destination/5" class="destination__grid__item">
         <img src="@\assets\destination\p5.png" alt="">
         <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </div>
-      <div class="destination__grid__item">
+      </router-link>
+      <router-link to="destination/6" class="destination__grid__item">
         <img src="@\assets\destination\p6.png" alt="">
         <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </div>
-      <div class="destination__grid__item">
+      </router-link>
+      <router-link to="destination/7" class="destination__grid__item">
         <img src="@\assets\destination\p7.png" alt="">
         <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </div>
-      <div class="destination__grid__item">
+      </router-link>
+      <router-link to="destination/8" class="destination__grid__item">
         <img src="@\assets\destination\p8.png" alt="">
         <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </div>
-      <div class="destination__grid__item">
+      </router-link>
+      <router-link to="destination/9" class="destination__grid__item">
         <img src="@\assets\destination\p9.png" alt="">
         <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </div>
+      </router-link>
+
     </div>
   </div>
   <FooterComponent />
