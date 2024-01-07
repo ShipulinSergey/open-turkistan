@@ -28,9 +28,9 @@
               <router-link class="nav__link" to="/opentv">{{
                 $t("nav__link__4")
               }}</router-link>
-              <a class="nav__link" href="#feedback" type="button">{{
+              <router-link class="nav__link" to="/contacts">{{
                 $t("nav__link__5")
-              }}</a>
+              }}</router-link>
             </section>
             <ThemeComponent />
             <LanguageComponent />
