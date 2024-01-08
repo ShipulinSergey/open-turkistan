@@ -44,6 +44,21 @@ const routes = [
         name: 'Contacts',
         component: () => import('@/views/ContactsView.vue'),
       },
+      {
+        path: '360',
+        name: '360',
+        component: () => import('@/views/360View.vue'),
+      },
+      {
+        path: 'photos',
+        name: 'Photos',
+        component: () => import('@/views/PhotosView.vue'),
+      },
+      {
+        path: 'videos',
+        name: 'Videos',
+        component: () => import('@/views/VideosView.vue'),
+      },
     ],
   },
 ]

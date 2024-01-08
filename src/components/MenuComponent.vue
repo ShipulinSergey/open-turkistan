@@ -28,6 +28,22 @@
               <router-link class="nav__link" to="/opentv">{{
                 $t("nav__link__4")
               }}</router-link>
+              <a class="nav__link" style="cursor: pointer;">
+                {{$t("nav__link__6")}}
+                <v-menu activator="parent">
+                  <v-list class="py-0" elevation="1" :bg-color="theme === 'dark' ? 'black' : 'white'" :theme="theme === 'dark' ? 'dark' : 'light'">
+                    <v-list-item value="2" @click="goTo('/photos')">
+                      <v-list-item-title>Фотогалерея</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item value="3" @click="goTo('/videos')">
+                      <v-list-item-title>Видеогалерея</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item value="1" @click="goTo('/360')">
+                      <v-list-item-title>OpenTurkistan 360</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </a>
               <router-link class="nav__link" to="/contacts">{{
                 $t("nav__link__5")
               }}</router-link>
@@ -44,10 +60,16 @@
 <script>
 import ThemeComponent from "@/components/ThemeComponent.vue";
 import LanguageComponent from "@/components/LanguageComponent.vue";
+import { mapState } from 'vuex';
 export default {
   components: {
     LanguageComponent,
     ThemeComponent,
+  },
+  computed: {
+    ...mapState({
+      theme: (state) => state.theme
+    })
   },
   methods: {
     goTo(path) {

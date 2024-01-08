@@ -47,6 +47,7 @@ export default {
         bodyStyles.setProperty("--secondary-color", "#fff");
         bodyStyles.setProperty("--input-bg", "#1e1e1e");
         bodyStyles.setProperty("--input-border", "#353535");
+        bodyStyles.setProperty("--360-color", "rgba(255, 255, 255, 0.30)");
         this.$store.dispatch('SET_VALUE', { key: 'theme', value:  "dark"});
         localStorage.setItem("theme", "dark");
       } else {
@@ -55,6 +56,7 @@ export default {
         bodyStyles.setProperty("--input-bg", "#fff");
         bodyStyles.setProperty("--input-border", "#696969");
         this.$store.dispatch('SET_VALUE', { key: 'theme', value:  "light"});
+        bodyStyles.setProperty("--360-color", "rgba(240, 117, 34, 0.30)");
         localStorage.setItem("theme", "light");
       }
     },
