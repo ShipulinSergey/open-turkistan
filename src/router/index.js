@@ -35,6 +35,11 @@ const routes = [
         component: () => import('@/views/AccommodationView.vue'),
       },
       {
+        path: 'restaurants',
+        name: 'Restaurants',
+        component: () => import('@/views/RestaurantsView.vue'),
+      },
+      {
         path: 'opentv',
         name: 'Opentv',
         component: () => import('@/views/OpenTVView.vue'),

@@ -234,6 +234,9 @@ $md4: 479.98px;
       text-align: right;
       width: 100%;
       white-space: nowrap;
+      &.nav__link-active {
+        color: $orange;
+      }
       @media (max-width: 1024px) {
         font-size: 14px;
       }

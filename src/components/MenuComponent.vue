@@ -16,19 +16,29 @@
                 Open <br />
                 <span>Turkistan</span>
               </h1>
-              <router-link class="nav__link" to="/about"> {{
+              <router-link class="nav__link" to="/about" :class="route === '/about' ? 'nav__link-active' : ''"> {{
                 $t("nav__link__1")
               }}</router-link>
-              <router-link class="nav__link" to="/accommodation"> {{
-                $t("nav__link__2")
-              }}</router-link>
-              <router-link class="nav__link" to="/destination">{{
+              <a class="nav__link" style="cursor: pointer;" :class="route === '/accommodation' || route === '/restaurants' ? 'nav__link-active' : ''">
+                {{  $t("nav__link__8") }}
+                <v-menu activator="parent">
+                  <v-list class="py-0" elevation="1" :bg-color="theme === 'dark' ? 'black' : 'white'" :theme="theme === 'dark' ? 'dark' : 'light'">
+                    <v-list-item value="2" @click="goTo('/accommodation')">
+                      <v-list-item-title>{{  $t("nav__link__2") }}</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item value="3" @click="goTo('/restaurants')">
+                      <v-list-item-title>{{  $t("nav__link__7") }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </a>
+              <router-link class="nav__link" to="/destination" :class="route === '/destination' ? 'nav__link-active' : ''">{{
                 $t("nav__link__3")
               }}</router-link>
-              <router-link class="nav__link" to="/opentv">{{
+              <router-link class="nav__link" to="/opentv" :class="route === '/opentv' ? 'nav__link-active' : ''">{{
                 $t("nav__link__4")
               }}</router-link>
-              <a class="nav__link" style="cursor: pointer;">
+              <a class="nav__link" style="cursor: pointer;" :class="route === '/photos' || route === '/videos' || route === '/360' ? 'nav__link-active' : ''">
                 {{$t("nav__link__6")}}
                 <v-menu activator="parent">
                   <v-list class="py-0" elevation="1" :bg-color="theme === 'dark' ? 'black' : 'white'" :theme="theme === 'dark' ? 'dark' : 'light'">
@@ -44,7 +54,7 @@
                   </v-list>
                 </v-menu>
               </a>
-              <router-link class="nav__link" to="/contacts">{{
+              <router-link class="nav__link" to="/contacts" :class="route === '/contacts' ? 'nav__link-active' : ''">{{
                 $t("nav__link__5")
               }}</router-link>
             </section>
@@ -69,7 +79,10 @@ export default {
   computed: {
     ...mapState({
       theme: (state) => state.theme
-    })
+    }),
+    route () {
+      return this.$route.path
+    }
   },
   methods: {
     goTo(path) {
