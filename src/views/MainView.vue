@@ -4,15 +4,10 @@
     <div class="section__header__content">
       <div class="section__header__row" v-animate-onscroll="'animated flip'">
         <div class="section__header__item">
-          <iframe
-            :src="videoUrl"
-            width="100%"
-            height="480px"
-            frameborder="0"
-            allowfullscreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            @ended="handleVideoEnded"
-          ></iframe>
+          <video autoplay loop muted width="100%" height="480px">
+            <source src="@\assets\main-video.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео тег.
+          </video>
         </div>
         <div class="section__header__item">
           <h2 class="section__header__item__title section__title">

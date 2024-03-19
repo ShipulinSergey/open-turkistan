@@ -4,41 +4,11 @@
     <div class="destination__title">{{ $t("destination__title") }}</div>
     <div class="destination__body">{{ $t("destination__body") }}</div>
     <div class="destination__grid">
-      <router-link to="destination/1" class="destination__grid__item">
-        <img src="@\assets\destination\p1.png" alt="">
-        <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </router-link>
-      <router-link to="destination/2" class="destination__grid__item">
-        <img src="@\assets\destination\p2.png" alt="">
-        <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </router-link>
-      <router-link to="destination/3" class="destination__grid__item">
-        <img src="@\assets\destination\p3.png" alt="">
-        <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </router-link>
-      <router-link to="destination/4" class="destination__grid__item">
-        <img src="@\assets\destination\p4.png" alt="">
-        <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </router-link>
-      <router-link to="destination/5" class="destination__grid__item">
-        <img src="@\assets\destination\p5.png" alt="">
-        <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </router-link>
-      <router-link to="destination/6" class="destination__grid__item">
-        <img src="@\assets\destination\p6.png" alt="">
-        <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </router-link>
-      <router-link to="destination/7" class="destination__grid__item">
-        <img src="@\assets\destination\p7.png" alt="">
-        <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </router-link>
-      <router-link to="destination/8" class="destination__grid__item">
-        <img src="@\assets\destination\p8.png" alt="">
-        <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
-      </router-link>
-      <router-link to="destination/9" class="destination__grid__item">
-        <img src="@\assets\destination\p9.png" alt="">
-        <div class="destination__grid__item__text">{{$t("destination__names")}}</div>
+      <router-link :to="`destination/${index + 1}`"  v-for="(item, index) in destinations" :key="index">
+        <div class="destination__grid__item">
+          <img :src="item.img" alt="">
+          <div class="destination__grid__item__text">{{item.name}}</div>
+        </div>
       </router-link>
 
     </div>
@@ -49,6 +19,53 @@
 <script setup>
 import FooterComponent from '@/components/FooterComponent.vue';
 import MenuComponent from '@/components/MenuComponent.vue';
+import { ref } from 'vue';
+
+const destinations = ref(
+  [
+    {
+      name: 'Сайрам-Угам',
+      img: new URL(`@/assets/destination/p1.jpg`, import.meta.url).href
+    },
+    {
+      name: 'Аксу-Джабаглы',
+      img: new URL(`@/assets/destination/p2.jpg`, import.meta.url).href
+    },
+    {
+      name: 'Заповедник Каратау',
+      img: new URL(`@/assets/destination/p3.jpg`, import.meta.url).href
+    },
+    {
+      name: 'Зерип Сланды',
+      img: new URL(`@/assets/destination/p4.jpg`, import.meta.url).href
+    },
+    {
+      name: 'Кеме Калган',
+      img: new URL(`@/assets/destination/p5.jpg`, import.meta.url).href
+    },
+    {
+      name: 'Жылаган Ата',
+      img: new URL(`@/assets/destination/p6.jpg`, import.meta.url).href
+    },
+    {
+      name: 'Городской музей г.Кентау',
+      img: new URL(`@/assets/destination/p7.jpg`, import.meta.url).href
+    },
+    {
+      name: 'Мечеть музей Шаммат ишан',
+      img: new URL(`@/assets/destination/p8.jpg`, import.meta.url).href
+    },
+    {
+      name: 'Мавзолей Укаш Ата',
+      img: new URL(`@/assets/destination/p9.jpg`, import.meta.url).href
+    },
+    {
+      name: 'Подземная пещера Ак Мечеть',
+      img: new URL(`@/assets/destination/p10.jpg`, import.meta.url).href
+    },
+  ]
+)
+
 </script>
 
 <style lang="scss">
@@ -104,20 +121,21 @@ import MenuComponent from '@/components/MenuComponent.vue';
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
       &__text {
-        transform: rotate(-90deg);
         color: #FFF;
-        font-size: 32px;
+        font-size: 25px;
         font-weight: 800;
         position: absolute;
         z-index: 1;
-        bottom: 43px;
-        left: 11px;
-        max-width: 78px;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        width: 250px;
         @media (max-width: 1252px) {
-          bottom: 20px;
-          left: 20px;
+          font-size: 18px;
+          width: 200px;
         }
       }
     }
