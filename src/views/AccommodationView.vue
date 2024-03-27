@@ -9,57 +9,57 @@
         <div class="accom__wrap">
           <div class="accom__item">
             <img src="@/assets/Accommodation/table1.png" alt="">
-            <div class="accom__item__title">Название отеля</div>
-            <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat>Подробнее</v-btn>
+            <div class="accom__item__title">Эдем</div>
+            <v-rating readonly half-increments hover :length="5" :size="33" :model-value="4.5" active-color="white" color="#C6C6C6" class="mb-12" />
+            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openLink('https://go.2gis.com/iqshk')">Подробнее</v-btn>
           </div>
           <div class="accom__item">
             <img src="@/assets/Accommodation/table2.png" alt="">
-            <div class="accom__item__title">Название отеля</div>
-            <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat>Подробнее</v-btn>
+            <div class="accom__item__title">Qas saq</div>
+            <v-rating readonly half-increments hover :length="5" :size="33" :model-value="4.5" active-color="white" color="#C6C6C6" class="mb-12" />
+            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openLink('https://go.2gis.com/44q37')">Подробнее</v-btn>
           </div>
           <div class="accom__item">
             <img src="@/assets/Accommodation/table3.png" alt="">
-            <div class="accom__item__title">Название отеля</div>
-            <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat>Подробнее</v-btn>
+            <div class="accom__item__title">Emir plaza</div>
+            <v-rating readonly half-increments hover :length="5" :size="33" :model-value="4.5" active-color="white" color="#C6C6C6" class="mb-12" />
+            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openLink('https://go.2gis.com/4hhr7r')">Подробнее</v-btn>
           </div>
           <div class="accom__item">
             <img src="@/assets/Accommodation/table4.png" alt="">
-            <div class="accom__item__title">Название отеля</div>
-            <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat>Подробнее</v-btn>
+            <div class="accom__item__title">Family Apartments</div>
+            <v-rating readonly half-increments hover :length="5" :size="33" :model-value="5" active-color="white" color="#C6C6C6" class="mb-12" />
+            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openLink('https://go.2gis.com/hvv59')">Подробнее</v-btn>
           </div>
           <div class="accom__item">
             <img src="@/assets/Accommodation/table5.png" alt="">
-            <div class="accom__item__title">Название отеля</div>
-            <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat>Подробнее</v-btn>
+            <div class="accom__item__title">Мырза hotels</div>
+            <v-rating readonly half-increments hover :length="5" :size="33" :model-value="4.5" active-color="white" color="#C6C6C6" class="mb-12" />
+            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openLink('https://go.2gis.com/k85g2')">Подробнее</v-btn>
           </div>
           <div class="accom__item">
-            <img src="@/assets/Accommodation/table1.png" alt="">
-            <div class="accom__item__title">Название отеля</div>
-            <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat>Подробнее</v-btn>
+            <img src="@/assets/Accommodation/table6.png" alt="">
+            <div class="accom__item__title">Bereke</div>
+            <v-rating readonly half-increments hover :length="5" :size="33" :model-value="4.5" active-color="white" color="#C6C6C6" class="mb-12" />
+            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openLink('https://go.2gis.com/7tixo')">Подробнее</v-btn>
           </div>
           <div class="accom__item">
-            <img src="@/assets/Accommodation/table2.png" alt="">
-            <div class="accom__item__title">Название отеля</div>
-            <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat>Подробнее</v-btn>
+            <img src="@/assets/Accommodation/table7.png" alt="">
+            <div class="accom__item__title">Nogai Grand</div>
+            <v-rating readonly half-increments hover :length="5" :size="33" :model-value="4.5" active-color="white" color="#C6C6C6" class="mb-12" />
+            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openLink('https://go.2gis.com/8771d')">Подробнее</v-btn>
           </div>
           <div class="accom__item">
-            <img src="@/assets/Accommodation/table3.png" alt="">
-            <div class="accom__item__title">Название отеля</div>
-            <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat>Подробнее</v-btn>
+            <img src="@/assets/Accommodation/table8.png" alt="">
+            <div class="accom__item__title">Qazaqstan</div>
+            <v-rating readonly half-increments hover :length="5" :size="33" :model-value="4.5" active-color="white" color="#C6C6C6" class="mb-12" />
+            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openLink('https://go.2gis.com/ms0ad')">Подробнее</v-btn>
           </div>
           <div class="accom__item">
-            <img src="@/assets/Accommodation/table4.png" alt="">
-            <div class="accom__item__title">Название отеля</div>
-            <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat>Подробнее</v-btn>
+            <img src="@/assets/Accommodation/table9.png" alt="">
+            <div class="accom__item__title">Ramada by Wyndham</div>
+            <v-rating readonly half-increments hover :length="5" :size="33" :model-value="3" active-color="white" color="#C6C6C6" class="mb-12" />
+            <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openLink('https://go.2gis.com/0ufwz')">Подробнее</v-btn>
           </div>
         </div>
         <div class="accom__pagination">
@@ -75,6 +75,10 @@
     import FooterComponent from '@/components/FooterComponent.vue';
     import FeedbackComponent from '@/components/FeedbackComponent.vue';
     import MenuComponent from '@/components/MenuComponent.vue';
+
+    const openLink = (url) => {
+      window.open(url, '_blank');
+    };
   </script>
 
   <style lang="scss">
