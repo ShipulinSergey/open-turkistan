@@ -7,7 +7,7 @@
       <router-link :to="`destination/${index + 1}`"  v-for="(item, index) in destinations" :key="index">
         <div class="destination__grid__item">
           <img :src="item.img" alt="">
-          <div class="destination__grid__item__text">{{item.name}}</div>
+          <div class="destination__grid__item__text">{{item.title}}</div>
         </div>
       </router-link>
 
@@ -19,52 +19,15 @@
 <script setup>
 import FooterComponent from '@/components/FooterComponent.vue';
 import MenuComponent from '@/components/MenuComponent.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
-const destinations = ref(
-  [
-    {
-      name: 'Сайрам-Угам',
-      img: new URL(`@/assets/destination/p1.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Аксу-Джабаглы',
-      img: new URL(`@/assets/destination/p2.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Заповедник Каратау',
-      img: new URL(`@/assets/destination/p3.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Зерип Сланды',
-      img: new URL(`@/assets/destination/p4.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Кеме Калган',
-      img: new URL(`@/assets/destination/p5.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Жылаган Ата',
-      img: new URL(`@/assets/destination/p6.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Городской музей г.Кентау',
-      img: new URL(`@/assets/destination/p7.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Мечеть музей Шаммат ишан',
-      img: new URL(`@/assets/destination/p8.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Мавзолей Укаш Ата',
-      img: new URL(`@/assets/destination/p9.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Подземная пещера Ак Мечеть',
-      img: new URL(`@/assets/destination/p10.jpg`, import.meta.url).href
-    },
-  ]
-)
+import destination from '../api/destination.api';
+
+const destinations = ref([]);
+
+const getList = () => destination.list().then(res => destinations.value = res.data);
+
+onMounted(() => getList());
 
 </script>
 

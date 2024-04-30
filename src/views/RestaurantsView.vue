@@ -7,10 +7,10 @@
     <div class="accom__table _container">
       <div class="accom__wrap">
         <div class="accom__item" v-for="(rest, index) in restaurants" :key="index">
-          <img :src="rest.img" alt="">
-          <div class="accom__item__title">{{rest.name}}</div>
+          <img :src="rest.img_url" alt="">
+          <div class="accom__item__title">{{rest.title}}</div>
           <v-rating hover :length="5" :size="33" :model-value="4" active-color="white" color="#C6C6C6" class="mb-12" />
-          <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="openInst(rest.link)">Подробнее</v-btn>
+          <v-btn height="48px" color="#F07522" class="accom__item__btn" flat @click="rest.link">Подробнее</v-btn>
         </div>
       </div>
       <div class="accom__pagination">
@@ -26,119 +26,16 @@
   import FooterComponent from '@/components/FooterComponent.vue';
   import FeedbackComponent from '@/components/FeedbackComponent.vue';
   import MenuComponent from '@/components/MenuComponent.vue';
-  import { ref } from 'vue';
+  import { ref, onMounted } from 'vue';
 
-  const restaurants = ref([
-    {
-      name: 'Кереге',
-      link: 'karavansarayturkistan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Кереге/rest 8.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Тандыр',
-      link: 'tandyr_turkestan_',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Тандыр/DSC07519.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Арбат',
-      link: 'arbat_turkestan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Арбат/DSC07589.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Сандық',
-      link: 'sandyq_restaurant',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Сандық/DSC07462.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Top Tobe',
-      link: 'toptobegrandhall',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Тор Тобе/ТопТобе.png`, import.meta.url).href
-    },
-    {
-      name: 'Wow Plov',
-      link: 'wow.plov',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Уоу Плов/DSC07386.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Zeynep',
-      link: 'zeynep_cafe',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Зейнеп/зейнеп.jpeg`, import.meta.url).href
-    },
-    {
-      name: 'KazakhAsia',
-      link: 'rixosturkistan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/kazakhasia/DSC08994.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Aspan',
-      link: 'rixosturkistan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/ASPAN/DSC08934.jpg`, import.meta.url).href
-    },
-    {
-      name: 'The Irish Pub',
-      link: 'rixosturkistan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/IRISH PUB/DSC_1174.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Balkon',
-      link: 'balkon_turkestan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Балкон/DSC07272.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Мята Almaty',
-      link: 'myata.almaty',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Мята Алматы/DSC08435.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Zoloto',
-      link: 'restaurant_zoloto',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Золото/DSC07812.jpg`, import.meta.url).href
-    },
-    {
-      name: 'The Baza',
-      link: 'thebaza2022',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Зе База/DSC07742.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Astau',
-      link: 'astau__restaurant',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/астау/DSC08003.jpg`, import.meta.url).href
-    },
-    {
-      name: 'CoffeeBoom',
-      link: 'coffeeboom2010turkestan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Кофе бум/DSC07497.jpg`, import.meta.url).href
-    },
-    {
-      name: 'ZebraCoffee',
-      link: 'zebracoffee.turkestan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Зебра/DSC07912.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Global Coffee',
-      link: 'globalcoffee_turkestan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Глобал/0J3A8878-2_resized.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Дорба',
-      link: 'dorba_turkestan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Дорба/DSC07644.jpg`, import.meta.url).href
-    },
-    {
-      name: 'Эдем',
-      link: 'edemhotel.kz',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/Эдем/эдем.jpeg`, import.meta.url).href
-    },
-    {
-      name: 'Додо Пицца',
-      link: 'dodopizza_turkestan',
-      img: new URL(`@/assets/Restaurants/Рестораны для сайта/До  До/DSC07436.jpg`, import.meta.url).href
-    },
-  ])
-  const openInst = (link) => {
-    const url = "https://www.instagram.com/" + link;
-    window.open(url, "_blank");
-  }
+  import restaurant from '../api/restaurant.api';
+
+  const restaurants = ref([]);
+
+  const getList = () => restaurant.list().then(res => restaurants.value = res.data);
+
+  onMounted(() => getList());
+
 </script>
 
 <style lang="scss">

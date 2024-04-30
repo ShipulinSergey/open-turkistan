@@ -8,18 +8,18 @@
     <div class="accom__table _container">
       <div class="accom__wrap">
         <div class="accom__item" v-for="(item, index) in hotels" :key="index">
-          <img :src="item.img" alt="">
-          <div class="accom__item__title">{{ item.name }}</div>
+          <img :src="item.image_url" alt="">
+          <div class="accom__item__title">{{ item.title }}</div>
           <v-rating readonly half-increments hover :length="5" :size="33" :model-value="4.5" active-color="white"
             color="#C6C6C6" class="mb-12" />
           <v-btn height="48px" color="#F07522" class="accom__item__btn" flat
-            @click="openInst(item.link)">Подробнее</v-btn>
+            :href="item.link" target="_blank">Подробнее</v-btn>
         </div>
       </div>
-      <div class="accom__pagination">
+      <!-- <div class="accom__pagination">
         <v-pagination class="accom__pagination__item" :length="5" active-color="#F07522"
           total-visible="5"></v-pagination>
-      </div>
+      </div> -->
     </div>
   </div>
   <FeedbackComponent />
@@ -30,74 +30,16 @@
 import FooterComponent from '@/components/FooterComponent.vue';
 import FeedbackComponent from '@/components/FeedbackComponent.vue';
 import MenuComponent from '@/components/MenuComponent.vue';
-import { ref } from 'vue';
 
-const hotels = ref([
-  {
-    name: 'Rixos Turkistan',
-    link: 'rixosturkistan',
-    img: new URL(`@/assets/Accommodation/rixos.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Karavan Saray',
-    link: 'karavansarayturkistan',
-    img: new URL(`@/assets/Accommodation/karavan.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Hampton by Hilton',
-    link: 'hampton_turkistan',
-    img: new URL(`@/assets/Accommodation/hampton.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Ramada by Wyndham',
-    link: 'ramada.turkistan',
-    img: new URL(`@/assets/Accommodation/ramada.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Silk Way Boutique hotel',
-    link: 'silkway.turkistan',
-    img: new URL(`@/assets/Accommodation/clik.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Edem Hotel',
-    link: 'edemhotel.kz',
-    img: new URL(`@/assets/Accommodation/edem.jpeg`, import.meta.url).href
-  },
-  {
-    name: 'Royal Grand',
-    link: 'royalgrandhotel',
-    img: new URL(`@/assets/Accommodation/royal.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Khanaka',
-    link: 'khanakahotel',
-    img: new URL(`@/assets/Accommodation/khanaka.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Khan Palace',
-    link: 'khan_palace_turkistan',
-    img: new URL(`@/assets/Accommodation/khan.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Qas Saq',
-    link: 'qassaq_hotel',
-    img: new URL(`@/assets/Accommodation/kazsaq.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Nursat',
-    link: 'nursat.otel.turkestan',
-    img: new URL(`@/assets/Accommodation/nursat.jpg`, import.meta.url).href
-  },
-  {
-    name: 'Aitolsyn',
-    link: 'aytolsin_hotel_sultansaray',
-    img: new URL(`@/assets/Accommodation/aitolsyn.JPG`, import.meta.url).href
-  },
-])
-const openInst = (link) => {
-  const url = "https://www.instagram.com/" + link;
-  window.open(url, "_blank");
-}
+import accommodation from '../api/accommodation.api';
+
+import { ref, onMounted } from 'vue';
+
+const hotels = ref([]);
+
+    const getList = () => accommodation.list().then(res => hotels.value = res.data);
+
+onMounted(() => getList());
 
 </script>
 
