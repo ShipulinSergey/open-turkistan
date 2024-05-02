@@ -8,50 +8,80 @@
           <div class="contacts__item__header">
             <div class="contacts__item__title">Отдел продаж</div>
             <div class="contacts__item__icon">
-              <img src="@\assets\icons\phone.png" alt="">
+              <img src="@\assets\icons\phone.png" alt="" />
             </div>
           </div>
           <div class="contacts__item__time">8:00 - 22:00 Пн-Сб</div>
-          <div class="contacts__item__badge online" v-if="isWorkingHours">Сейчас работаем</div>
+          <div class="contacts__item__badge online" v-if="isWorkingHours">
+            Сейчас работаем
+          </div>
           <div class="contacts__item__badge" v-else>Сейчас оффлайн</div>
           <div class="contacts__item__text">Первая линия</div>
-          <a href="tel:+77299233212" class="contacts__item__phone">+7 (729) 923 - 32 -12</a>
+          <a href="tel:+77299233212" class="contacts__item__phone"
+            >+7 (729) 923 - 32 -12</a
+          >
           <div class="contacts__item__text">Вторая линия</div>
-          <a href="tel:+77299233212" class="contacts__item__phone">+7 (729) 923 - 32 -12</a>
+          <a href="tel:+77299233212" class="contacts__item__phone"
+            >+7 (729) 923 - 32 -12</a
+          >
         </div>
 
         <div class="contacts__item">
           <div class="contacts__item__header">
             <div class="contacts__item__title">Тех. поддержка</div>
             <div class="contacts__item__icon">
-              <img src="@\assets\icons\caller.png" alt="">
+              <img src="@\assets\icons\caller.png" alt="" />
             </div>
           </div>
           <div class="contacts__item__time">8:00 - 22:00 Пн-Сб</div>
-          <div class="contacts__item__badge online" v-if="isWorkingHours">Сейчас работаем</div>
+          <div class="contacts__item__badge online" v-if="isWorkingHours">
+            Сейчас работаем
+          </div>
           <div class="contacts__item__badge" v-else>Сейчас оффлайн</div>
           <div class="contacts__item__text">Первая линия</div>
-          <a href="tel:+77299233212" class="contacts__item__phone">+7 (729) 923 - 32 -12</a>
+          <a href="tel:+77299233212" class="contacts__item__phone"
+            >+7 (729) 923 - 32 -12</a
+          >
           <div class="contacts__item__text">Вторая линия</div>
-          <a href="tel:+77299233212" class="contacts__item__phone">+7 (729) 923 - 32 -12</a>
-          <a href="mailto:support@openturkistan.kz" class="contacts__item__mail"><img src="@\assets\icons\mail.svg"
-              alt="">support@openturkistan.kz</a>
+          <a href="tel:+77299233212" class="contacts__item__phone"
+            >+7 (729) 923 - 32 -12</a
+          >
+          <a href="mailto:support@openturkistan.kz" class="contacts__item__mail"
+            ><img
+              src="@\assets\icons\mail.svg"
+              alt=""
+            />support@openturkistan.kz</a
+          >
         </div>
 
         <div class="contacts__item">
           <div class="contacts__item__header">
             <div class="contacts__item__title">Наши офисы</div>
             <div class="contacts__item__icon">
-              <img src="@\assets\icons\build.png" alt="">
+              <img src="@\assets\icons\build.png" alt="" />
             </div>
           </div>
-          <div class="contacts__item__title" style="font-weight: 500; margin-bottom: 15px;">Туркестан</div>
-          <div class="contacts__item__phone" style="margin-bottom: 13px;">Visit Centre Turkistan</div>
-          <div class="contacts__item__phone" style="margin-bottom: 13px;">08:00 - 21:00</div>
-          <a href="tel:+77071862843" class="contacts__item__phone">+7 (729) 923 - 32 -12</a>
+          <div
+            class="contacts__item__title"
+            style="font-weight: 500; margin-bottom: 15px"
+          >
+            Туркестан
+          </div>
+          <div class="contacts__item__phone" style="margin-bottom: 13px">
+            Город Туркестан, Областной административно-деловой центр, 160
+            квартал, Дом Управление
+          </div>
+          <div class="contacts__item__phone" style="margin-bottom: 13px">
+            08:00 - 21:00
+          </div>
+          <a href="tel:+77071862843" class="contacts__item__phone"
+            >+7 (729) 923 - 32 -12</a
+          >
           <div class="spacer"></div>
 
-          <a href="#" class="contacts__item__mail"><img src="@\assets\icons\point.svg" alt="">Адреса</a>
+          <a href="#" class="contacts__item__mail"
+            ><img src="@\assets\icons\point.svg" alt="" />Адреса</a
+          >
         </div>
       </div>
     </div>
@@ -60,9 +90,9 @@
 </template>
 
 <script setup>
-import FooterComponent from '@/components/FooterComponent.vue';
-import MenuComponent from '@/components/MenuComponent.vue';
-import { ref, onMounted } from 'vue';
+import FooterComponent from "@/components/FooterComponent.vue";
+import MenuComponent from "@/components/MenuComponent.vue";
+import { ref, onMounted } from "vue";
 
 const isWorkingHours = ref(false);
 
@@ -70,7 +100,6 @@ const checkWorkingHours = () => {
   const now = new Date();
   const dayOfWeek = now.getDay();
   const hours = now.getHours();
-
 
   const isWeekday = dayOfWeek >= 1 && dayOfWeek <= 6;
   const isWorkingTime = hours >= 8 && hours < 22;
@@ -85,7 +114,6 @@ onMounted(() => {
     checkWorkingHours();
   }, 60000);
 });
-
 </script>
 
 <style lang="scss">
@@ -137,7 +165,7 @@ onMounted(() => {
   &__item {
     padding: 25px 33px;
     border-radius: 15px;
-    border: 2px solid #C4C4C4;
+    border: 2px solid #c4c4c4;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -157,7 +185,7 @@ onMounted(() => {
     }
 
     &__icon {
-      background-color: #F8F8F8;
+      background-color: #f8f8f8;
       border-radius: 50%;
       height: 54px;
       width: 54px;
@@ -176,8 +204,8 @@ onMounted(() => {
     &__badge {
       margin-bottom: 21px;
       border-radius: 5px;
-      background: #F5D0D3;
-      color: #BF0F0F;
+      background: #f5d0d3;
+      color: #bf0f0f;
       font-family: Montserrat;
       font-size: 16px;
       font-weight: 500;
@@ -187,8 +215,8 @@ onMounted(() => {
       justify-content: center;
       height: 40px;
       &.online {
-        background: #D8F5D0;
-        color: #32BF0F;
+        background: #d8f5d0;
+        color: #32bf0f;
       }
     }
 
@@ -216,7 +244,7 @@ onMounted(() => {
       justify-content: center;
       gap: 13px;
       border-radius: 40px;
-      border: 2px solid #F07522;
+      border: 2px solid #f07522;
       padding: 22px 0;
       text-decoration: none;
       color: var(--secondary-color);
@@ -228,4 +256,5 @@ onMounted(() => {
       }
     }
   }
-}</style>
+}
+</style>

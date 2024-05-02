@@ -15,7 +15,9 @@
   "destination__slide__1": "мавзолей ходжа ахмеда яссауи",
   "destination__slide__2": "Жайлау",
 
-  "hotel__price": "от 12 000 ₸",
+  "hotel__price__1": "от 35 000 ₸",
+  "hotel__price__2": "от 45 000 ₸",
+  "hotel__price__3": "от 35 000 ₸",
 
   "impression__title__1": "Впечатления от",
   "impression__title__2": "Туркестана",
@@ -33,7 +35,8 @@
   "feedback__input__2": "Номер телефона",
   "feedback__action": "Отправить",
 
-  "footer__rights": "Авторское право © 2023 Туркестан. Все права защищены TGA",
+  "footer__rights__1": "Авторское право ©",
+  "footer__rights__2": " Туркестан. Все права защищены TGA",
   "footer__politics__1": "Политика в отношении файлов cookie",
   "footer__politics__2": "Политика Конфиденциальности",
 

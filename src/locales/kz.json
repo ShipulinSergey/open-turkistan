@@ -15,7 +15,9 @@
   "destination__slide__1": "Хожа Ахмет Яссауи мавзолеясы",
   "destination__slide__2": "Жайлау",
 
-  "hotel__price": "12 000 ₸ бастап",
+  "hotel__price__1": "35 000 ₸ бастап",
+  "hotel__price__2": "45 000 ₸ бастап",
+  "hotel__price__3": "35 000 ₸ бастап",
 
   "impression__title__1": "Түркістаннан",
   "impression__title__2": "алған әсерім",
@@ -33,7 +35,8 @@
   "feedback__input__2": "Телефон нөмірі",
   "feedback__action": "Жіберу",
 
-  "footer__rights": "Авторлық құқық © 2023 Түркістан. Барлық құқықтар қорғалған TGA",
+  "footer__rights__1": "Авторлық құқық ©",
+  "footer__rights__2": " Түркістан. Барлық құқықтар қорғалған TGA",
   "footer__politics__1": "Кукілік саясаты",
   "footer__politics__2": "Жеке деректер саясаты",
 

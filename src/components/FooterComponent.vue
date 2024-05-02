@@ -12,7 +12,9 @@
           <a href="#"><span class="mdi mdi-youtube"></span></a>
         </div>
         <p class="section__footer__item__rights">
-          {{ $t("footer__rights") }}
+          {{ $t("footer__rights__1") }}
+          {{ year }}
+          {{ $t("footer__rights__2") }}
         </p>
         <p class="section__footer__item__politics">
           <a href="#"> {{ $t("footer__politics__1") }} </a>
@@ -24,7 +26,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      year: 0
+    }
+  },
+  mounted () {
+    this.year = new Date().getFullYear()
+  }
+};
 </script>
 
 <style></style>

@@ -16,7 +16,7 @@
             <div class="section__hotel__slider__content__bg">
               <div class="section__hotel__slider__content__bg__text">
                 <p>Hampton by hilton</p>
-                <span>{{ $t("hotel__price") }}</span>
+                <span>{{ $t("hotel__price__1") }}</span>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@
             <div class="section__hotel__slider__content__bg">
               <div class="section__hotel__slider__content__bg__text">
                 <p>Rixos Turkistan</p>
-                <span>{{ $t("hotel__price") }}</span>
+                <span>{{ $t("hotel__price__2") }}</span>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@
             <div class="section__hotel__slider__content__bg">
               <div class="section__hotel__slider__content__bg__text">
                 <p>karavansaray</p>
-                <span>{{ $t("hotel__price") }}</span>
+                <span>{{ $t("hotel__price__3") }}</span>
               </div>
             </div>
           </div>

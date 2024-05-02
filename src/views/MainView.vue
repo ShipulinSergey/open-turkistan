@@ -54,7 +54,7 @@
           <h2 class="section__hotel__item__title section__title" style="color: #FFF;">
             Гостиницы и места проживания
           </h2>
-          <button class="section__hotel__item__action regular__btn">
+          <button class="section__hotel__item__action regular__btn" @click="goToAccom">
             Все гостиницы
           </button>
         </div>
@@ -154,7 +154,7 @@
   <FooterComponent />
 </template>
 
-<script>
+<script setup>
 import DestinationSlider from "@/components/sliders/DestinationSlider.vue";
 import ImpressionSlider from "@/components/sliders/ImpressionSlider.vue";
 import HotelSlider from "@/components/sliders/HotelSlider.vue";
@@ -162,28 +162,10 @@ import HotelSlider from "@/components/sliders/HotelSlider.vue";
 import MenuComponent from "@/components/MenuComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
-export default {
-  components: {
-    MenuComponent,
-    DestinationSlider,
-    ImpressionSlider,
-    HotelSlider,
-    FooterComponent,
-  },
-  data() {
-    return {
-      videoUrl: "https://www.youtube.com/embed/BhgCBgTn_RQ?autoplay=1&mute=1&controls=0",
-    };
-  },
-  methods: {
-    handleVideoEnded() {
-      console.log('end');
-      // Reset the video playback to the beginning and play again
-      this.$refs.video.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[0,"true"]}', '*');
-      this.$refs.video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-    },
-  },
-};
+const goToAccom = () => {
+  this.$router.push('/accommodation')
+
+}
 </script>
 
 <style></style>

@@ -1,13 +1,23 @@
 <template>
   <div class="section__select">
-    <v-select v-model="lang" :items="['RU', 'KZ']" variant="solo" class="elevation-0" density="compact" hide-details flat
-      :bg-color="theme === 'dark' ? 'black' : 'white'" :theme="theme === 'dark' ? 'dark' : 'light'"
-      menu-icon="mdi-chevron-down" @change="changeLanguage"></v-select>
+    <v-select
+      v-model="lang"
+      :items="['RU', 'KZ', 'EN']"
+      variant="solo"
+      class="elevation-0"
+      density="compact"
+      hide-details
+      flat
+      :bg-color="theme === 'dark' ? 'black' : 'white'"
+      :theme="theme === 'dark' ? 'dark' : 'light'"
+      menu-icon="mdi-chevron-down"
+      @change="changeLanguage"
+    ></v-select>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -16,13 +26,13 @@ export default {
   },
   computed: {
     ...mapState({
-      theme: (state) => state.theme
-    })
+      theme: (state) => state.theme,
+    }),
   },
   watch: {
-    lang () {
-      this.setLanguagePreference()
-    }
+    lang() {
+      this.setLanguagePreference();
+    },
   },
   methods: {
     setLanguagePreference() {
