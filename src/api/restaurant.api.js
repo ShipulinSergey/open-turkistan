@@ -1,9 +1,10 @@
 import api from "./base";
 
 export default {
-  list() {
+  list(next) {
+    let url = next ? 'restaurants?page=' + next : 'restaurants'
     return api
-      .get("restaurants")
+      .get(url)
       .then((res) => {
         return res.data;
       })

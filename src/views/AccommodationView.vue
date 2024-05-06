@@ -8,18 +8,49 @@
     <div class="accom__table _container">
       <div class="accom__wrap">
         <div class="accom__item" v-for="(item, index) in hotels" :key="index">
-          <img :src="item.image_url" alt="">
-          <div class="accom__item__title">{{ item.title }}</div>
-          <v-rating readonly half-increments hover :length="5" :size="33" :model-value="4.5" active-color="white"
-            color="#C6C6C6" class="mb-12" />
-          <v-btn height="48px" color="#F07522" class="accom__item__btn" flat
-            :href="item.link" target="_blank">Подробнее</v-btn>
+          <div
+            class="accom__item__image"
+            :style="{ backgroundImage: 'url(' + item.image_url + ')' }"
+          ></div>
+          <!-- <img :src="item.image_url" alt="" /> -->
+          <div class="accom__item__wrap">
+            <v-rating
+              readonly
+              half-increments
+              hover
+              :length="5"
+              :size="33"
+              :model-value="item.stars"
+              active-color="#F07522"
+              color="#C6C6C6"
+            />
+            <div class="accom__item__title">{{ item.title }}</div>
+            <v-btn
+              height="48px"
+              color="#F07522"
+              class="accom__item__btn"
+              flat
+              :href="item.link"
+              target="_blank"
+              width="200px"
+              >Веб-сайт отеля</v-btn
+            >
+          </div>
         </div>
       </div>
-      <!-- <div class="accom__pagination">
-        <v-pagination class="accom__pagination__item" :length="5" active-color="#F07522"
-          total-visible="5"></v-pagination>
-      </div> -->
+      <div class="accom__pagination">
+        <div
+          class="accom__pagination__item"
+          v-for="item in paginationCount"
+          :key="item"
+          :class="
+            activePagination === item ? 'accom__pagination__item-active' : ''
+          "
+          @click="activePagination = item"
+        >
+          {{ item }}
+        </div>
+      </div>
     </div>
   </div>
   <FeedbackComponent />
@@ -27,20 +58,35 @@
 </template>
 
 <script setup>
-import FooterComponent from '@/components/FooterComponent.vue';
-import FeedbackComponent from '@/components/FeedbackComponent.vue';
-import MenuComponent from '@/components/MenuComponent.vue';
+import FooterComponent from "@/components/FooterComponent.vue";
+import FeedbackComponent from "@/components/FeedbackComponent.vue";
+import MenuComponent from "@/components/MenuComponent.vue";
 
-import accommodation from '../api/accommodation.api';
+import accommodation from "../api/accommodation.api";
 
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from "vue";
 
 const hotels = ref([]);
+const activePagination = ref(1);
+const paginationCount = ref(0)
 
-    const getList = () => accommodation.list().then(res => hotels.value = res.data);
+const getList = (next) =>
+  accommodation
+    .list(next)
+    .then((res) => {
+      hotels.value = res.data
+      paginationCount.value = res.meta.last_page
+    });
 
-onMounted(() => getList());
+onMounted(() => getList(activePagination.value));
 
+// const paginationCount = computed(() => {
+//   return Math.ceil(hotels.value.length / 6);
+// });
+
+watch(activePagination, (newValue) => {
+  getList(newValue)
+});
 </script>
 
 <style lang="scss">
@@ -49,7 +95,13 @@ onMounted(() => getList());
   padding-top: 80px;
 
   &__back {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('@/assets/Accommodation/accom-back.png'), lightgray 50% / cover no-repeat;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url("@/assets/Accommodation/accom-back.png"),
+      lightgray 50% / cover no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,7 +119,7 @@ onMounted(() => getList());
     }
 
     &__title {
-      color: #FFF;
+      color: #fff;
       font-family: Montserrat;
       font-size: 48px;
       font-weight: 800;
@@ -83,7 +135,7 @@ onMounted(() => getList());
     }
 
     &__subtitle {
-      color: #FFF;
+      color: #fff;
       font-family: Montserrat;
       font-size: 64px;
       font-weight: 800;
@@ -105,60 +157,77 @@ onMounted(() => getList());
 
   &__wrap {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px;
     margin-bottom: 45px;
 
-    @media (max-width: 600px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    @media (max-width: 400px) {
+    @media (max-width: 1000px) {
       grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
     }
   }
 
   &__item {
-    position: relative;
-    width: 100%;
-    height: 260px;
-    overflow: hidden;
-    border-radius: 15px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      right: 0;
-      z-index: -1;
+    gap: 26px;
+    @media (max-width: 500px) {
+      gap: 10px;
     }
-
+    @media (max-width: 400px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 25px 0;
+      @media (max-width: 400px) {
+        gap: 20px;
+        align-items: center;
+      }
+    }
+    &__image {
+      width: 220px;
+      height: 280px;
+      border-radius: 54px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media (max-width: 500px) {
+        width: 150px;
+        height: 200px;
+      }
+      @media (max-width: 400px) {
+        width: 100%;
+        height: 400px;
+      }
+    }
     &__title {
-      color: #FFF;
       font-family: Montserrat;
-      font-size: 32px;
-      font-weight: 800;
-      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 24px;
+      color: var(--secondary-color);
+      @media (max-width: 500px) {
+        font-size: 20px;
+      }
     }
 
     &__btn {
-      border-radius: 16px !important;
-      width: 170px;
+      border-radius: 10px !important;
 
       span {
         text-transform: initial;
-        color: #FFF;
+        color: #fff;
         font-family: Montserrat;
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
         line-height: 24px;
+        @media (max-width: 500px) {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -166,35 +235,22 @@ onMounted(() => getList());
   &__pagination {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-bottom: 80px;
-
+    gap: 8px;
     &__item {
-
-      .v-pagination__prev,
-      .v-pagination__next {
-        display: none;
-      }
-
-      .v-btn {
-        width: 29px !important;
-        height: 34px !important;
-        padding: 5px 10px;
-        border-radius: 8px !important;
-        background: #C4C4C4;
-
-        span {
-          color: #FFF;
-          font-family: Montserrat;
-          font-size: 14px;
-          font-weight: 700;
-        }
-      }
-
-      .v-pagination__item--is-active {
-        .v-btn {
-          background: #F07522;
-        }
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      padding: 5px 10px;
+      background-color: #c4c4c4;
+      border-radius: 8px;
+      cursor: pointer;
+      min-width: 30px;
+      text-align: center;
+      &-active {
+        background-color: #f07522;
       }
     }
   }

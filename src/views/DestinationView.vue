@@ -4,31 +4,34 @@
     <div class="destination__title">{{ $t("destination__title") }}</div>
     <div class="destination__body">{{ $t("destination__body") }}</div>
     <div class="destination__grid">
-      <router-link :to="`destination/${index + 1}`"  v-for="(item, index) in destinations" :key="index">
+      <router-link
+        v-for="(item, index) in destinations"
+        :key="index"
+        :to="`destination/${item.id}`"
+      >
         <div class="destination__grid__item">
-          <img :src="item.img" alt="">
-          <div class="destination__grid__item__text">{{item.title}}</div>
+          <img :src="item.image" alt="" />
+          <div class="destination__grid__item__text">{{ item.title }}</div>
         </div>
       </router-link>
-
     </div>
   </div>
   <FooterComponent />
 </template>
 
 <script setup>
-import FooterComponent from '@/components/FooterComponent.vue';
-import MenuComponent from '@/components/MenuComponent.vue';
-import { ref, onMounted } from 'vue';
+import FooterComponent from "@/components/FooterComponent.vue";
+import MenuComponent from "@/components/MenuComponent.vue";
+import { ref, onMounted } from "vue";
 
-import destination from '../api/destination.api';
+import destination from "../api/destination.api";
 
 const destinations = ref([]);
 
-const getList = () => destination.list().then(res => destinations.value = res.data);
+const getList = () =>
+  destination.list().then((res) => (destinations.value = res.data));
 
 onMounted(() => getList());
-
 </script>
 
 <style lang="scss">
@@ -87,7 +90,7 @@ onMounted(() => getList());
         object-fit: cover;
       }
       &__text {
-        color: #FFF;
+        color: #fff;
         font-size: 25px;
         font-weight: 800;
         position: absolute;

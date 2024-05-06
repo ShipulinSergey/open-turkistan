@@ -9,7 +9,7 @@ export default {
         });
     },
     item(id) {
-        return api.get(`destinations${id}`).then(res => {
+        return api.get(`destinations/${id}`).then(res => {
             return res.data;
         }).catch(err => {
             return err.data;
