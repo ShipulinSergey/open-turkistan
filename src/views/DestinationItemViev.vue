@@ -64,7 +64,7 @@ const pageId = route.params.id;
 const destinationItem = ref({})
 
 const getDest = (id) =>
-  destination.item(id).then((res) => (destinationItem.value = res));
+  destination.item(id, localStorage.getItem("currentLanguage").toLowerCase() ?? 'ru').then((res) => (destinationItem.value = res));
 
 onMounted(() => getDest(pageId));
 </script>
