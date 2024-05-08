@@ -8,8 +8,8 @@ export default {
             return err.data;
         });
     },
-    item(id) {
-        return api.get(`destinations/${id}`).then(res => {
+    item(id, lang) {
+        return api.get(`destinations/${id}?lang=${lang}`).then(res => {
             return res.data;
         }).catch(err => {
             return err.data;
