@@ -81,6 +81,7 @@ onMounted(() => getList());
       height: 295px;
       position: relative;
       cursor: pointer;
+      box-shadow: 4px 4px 4px 0px #0000004D;
       @media (max-width: 1252px) {
         height: 250px;
       }
@@ -99,6 +100,8 @@ onMounted(() => getList());
         left: 30%;
         transform: translate(-50%, -50%) rotate(-90deg);
         width: 250px;
+        text-align: center;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
         @media (max-width: 1252px) {
           font-size: 18px;
           width: 200px;
