@@ -5,7 +5,7 @@
       <div class="section__header__row" v-animate-onscroll="'animated flip'">
         <div class="section__header__item">
           <video autoplay loop muted width="100%" height="480px">
-            <source src="@\assets\main-video.mp4" type="video/mp4">
+            <source src="@\assets\main-video.mp4" type="video/mp4" />
             Ваш браузер не поддерживает видео тег.
           </video>
         </div>
@@ -51,10 +51,16 @@
           <HotelSlider />
         </div>
         <div class="section__hotel__item">
-          <h2 class="section__hotel__item__title section__title" style="color: #FFF;">
+          <h2
+            class="section__hotel__item__title section__title"
+            style="color: #fff"
+          >
             Гостиницы и места проживания
           </h2>
-          <button class="section__hotel__item__action regular__btn" @click="goToAccom">
+          <button
+            class="section__hotel__item__action regular__btn"
+            @click="goToAccom"
+          >
             Все гостиницы
           </button>
         </div>
@@ -93,11 +99,20 @@
           </p>
 
           <form action="" class="section__feedback__item__form">
-            <input type="text" class="section__feedback__item__form__input"
-              :placeholder="$t('feedback__input__1')" />
-            <input type="text" class="section__feedback__item__form__input"
-              :placeholder="$t('feedback__input__2')" />
-            <button type="submit" class="section__feedback__item__form__submit regular__btn">
+            <input
+              type="text"
+              class="section__feedback__item__form__input"
+              :placeholder="$t('feedback__input__1')"
+            />
+            <input
+              type="text"
+              class="section__feedback__item__form__input"
+              :placeholder="$t('feedback__input__2')"
+            />
+            <button
+              type="submit"
+              class="section__feedback__item__form__submit regular__btn"
+            >
               {{ $t("feedback__action") }}
             </button>
           </form>
@@ -163,9 +178,8 @@ import MenuComponent from "@/components/MenuComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
 const goToAccom = () => {
-  this.$router.push('/accommodation')
-
-}
+  this.$router.push("/accommodation");
+};
 </script>
 
 <style></style>

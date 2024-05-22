@@ -2,25 +2,29 @@
   <MenuComponent />
   <div class="contacts">
     <div class="_container">
-      <div class="contacts__title">Контакты</div>
+      <div class="contacts__title">{{ $t("nav__link__5") }}</div>
       <div class="contacts__wrap">
         <div class="contacts__item">
           <div class="contacts__item__header">
-            <div class="contacts__item__title">Отдел продаж</div>
+            <div class="contacts__item__title">
+              {{ $t("contacts__title__1") }}
+            </div>
             <div class="contacts__item__icon">
               <img src="@\assets\icons\phone.png" alt="" />
             </div>
           </div>
-          <div class="contacts__item__time">8:00 - 22:00 Пн-Сб</div>
+          <div class="contacts__item__time">{{ $t("contacts__time__1") }}</div>
           <div class="contacts__item__badge online" v-if="isWorkingHours">
-            Сейчас работаем
+            {{ $t("contacts__online") }}
           </div>
-          <div class="contacts__item__badge" v-else>Сейчас оффлайн</div>
-          <div class="contacts__item__text">Первая линия</div>
+          <div class="contacts__item__badge" v-else>
+            {{ $t("contacts__offline") }}
+          </div>
+          <div class="contacts__item__text">{{ $t("contacts__line__1") }}</div>
           <a href="tel:+77299233212" class="contacts__item__phone"
             >+7 (729) 923 - 32 -12</a
           >
-          <div class="contacts__item__text">Вторая линия</div>
+          <div class="contacts__item__text">{{ $t("contacts__line__2") }}</div>
           <a href="tel:+77299233212" class="contacts__item__phone"
             >+7 (729) 923 - 32 -12</a
           >
@@ -28,21 +32,23 @@
 
         <div class="contacts__item">
           <div class="contacts__item__header">
-            <div class="contacts__item__title">Тех. поддержка</div>
+            <div class="contacts__item__title">
+              {{ $t("contacts__title__2") }}
+            </div>
             <div class="contacts__item__icon">
               <img src="@\assets\icons\caller.png" alt="" />
             </div>
           </div>
-          <div class="contacts__item__time">8:00 - 22:00 Пн-Сб</div>
+          <div class="contacts__item__time">{{ $t("contacts__time__2") }}</div>
           <div class="contacts__item__badge online" v-if="isWorkingHours">
-            Сейчас работаем
+            {{ $t("contacts__online") }}
           </div>
-          <div class="contacts__item__badge" v-else>Сейчас оффлайн</div>
-          <div class="contacts__item__text">Первая линия</div>
+          <div class="contacts__item__badge" v-else>{{ $t("contacts__offline") }}</div>
+          <div class="contacts__item__text">{{ $t("contacts__line__1") }}</div>
           <a href="tel:+77299233212" class="contacts__item__phone"
             >+7 (729) 923 - 32 -12</a
           >
-          <div class="contacts__item__text">Вторая линия</div>
+          <div class="contacts__item__text">{{ $t("contacts__line__2") }}</div>
           <a href="tel:+77299233212" class="contacts__item__phone"
             >+7 (729) 923 - 32 -12</a
           >
@@ -56,7 +62,7 @@
 
         <div class="contacts__item">
           <div class="contacts__item__header">
-            <div class="contacts__item__title">Наши офисы</div>
+            <div class="contacts__item__title">{{ $t("contacts__title__3") }}</div>
             <div class="contacts__item__icon">
               <img src="@\assets\icons\build.png" alt="" />
             </div>
@@ -65,11 +71,10 @@
             class="contacts__item__title"
             style="font-weight: 500; margin-bottom: 15px"
           >
-            Туркестан
+          {{ $t("contacts__time__3") }}
           </div>
           <div class="contacts__item__phone" style="margin-bottom: 13px">
-            Город Туркестан, Областной административно-деловой центр, 160
-            квартал, Дом Управление
+            {{ $t("contacts__addres") }}
           </div>
           <div class="contacts__item__phone" style="margin-bottom: 13px">
             08:00 - 21:00

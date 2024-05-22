@@ -2,8 +2,8 @@
   <MenuComponent />
   <div class="accom">
     <div class="accom__back">
-      <div class="accom__back__title">Вы готовы приступить?</div>
-      <div class="accom__back__subtitle">Забронировать поездку</div>
+      <div class="accom__back__title">{{ $t("accom__title") }}</div>
+      <div class="accom__back__subtitle">{{ $t("accom__subtitle") }}</div>
     </div>
     <div class="accom__table _container">
       <div class="accom__wrap">
@@ -33,7 +33,7 @@
               :href="item.link"
               target="_blank"
               width="200px"
-              >Веб-сайт отеля</v-btn
+              >{{ $t("accom__btn") }}</v-btn
             >
           </div>
         </div>
@@ -68,15 +68,13 @@ import { ref, onMounted, watch } from "vue";
 
 const hotels = ref([]);
 const activePagination = ref(1);
-const paginationCount = ref(0)
+const paginationCount = ref(0);
 
 const getList = (next) =>
-  accommodation
-    .list(next)
-    .then((res) => {
-      hotels.value = res.data
-      paginationCount.value = res.meta.last_page
-    });
+  accommodation.list(next).then((res) => {
+    hotels.value = res.data;
+    paginationCount.value = res.meta.last_page;
+  });
 
 onMounted(() => getList(activePagination.value));
 
@@ -85,7 +83,7 @@ onMounted(() => getList(activePagination.value));
 // });
 
 watch(activePagination, (newValue) => {
-  getList(newValue)
+  getList(newValue);
 });
 </script>
 

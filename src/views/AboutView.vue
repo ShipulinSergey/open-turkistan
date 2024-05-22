@@ -3,20 +3,21 @@
   <div class="about">
     <div class="about__statistics _container">
       <div class="about__statistics__info">
-        <div class="about__statistics__title">
-          TURKISTAN
-        </div>
+        <div class="about__statistics__title">TURKISTAN</div>
         <div class="about__statistics__body">
-          Открой для себя великолепие Open <a class="about__statistics__body__link" href="#feedback">Turkistan</a>:
-          история,
-          культура и современность в едином пространстве возможностей!
+          {{ $t("about__title__1") }}
+          <a class="about__statistics__body__link" href="#feedback">{{
+            $t("about__title__2")
+          }}</a
+          >:
+          {{ $t("about__title__3") }}
         </div>
         <div class="about__statistics__actions">
           <button class="about__statistics__button">
-            Оставить заявку
+            {{ $t("about__application") }}
           </button>
           <button class="about__statistics__button">
-            Связаться с нами
+            {{ $t("about__connect") }}
           </button>
         </div>
         <div class="about__statistics__numbers">
@@ -32,80 +33,81 @@
         </div>
       </div>
       <div class="about__statistics__img">
-        <img src="@\assets\About\statistic.png" alt="">
+        <img src="@\assets\About\statistic.png" alt="" />
       </div>
     </div>
     <div class="about__mission _container">
       <div class="about__mission__info">
         <div class="about__mission__title">
-          <span>Наша </span> <span>Миссия</span>
+          <span>{{ $t("about__mission__1") }} </span>
+          <span>{{ $t("about__mission__2") }}</span>
         </div>
         <div class="about__mission__body">
-          В Open Turkistan мы стремимся к тому, чтобы стать вдохновляющим центром, объединяющим богатое наследие и
-          современные тенденции. Наша миссия заключается в раскрытии уникальности Туркестана, предоставлении платформы для
-          обмена идеями и восхищения культурным разнообразием. Мы работаем с целью стимулировать интерес и любовь к
-          истории, искусству и современной динамике этого прекрасного региона. С Open Turkistan каждый может открыть для
-          себя неиссякаемый источник вдохновения и понимания
+          {{ $t("about__mission__body") }}
         </div>
       </div>
       <div class="about__mission__img">
-        <img src="@\assets\About\mission1.png" alt="">
-        <img src="@\assets\About\mission2.png" alt="">
+        <img src="@\assets\About\mission1.png" alt="" />
+        <img src="@\assets\About\mission2.png" alt="" />
       </div>
     </div>
     <div class="about__team _container">
       <div class="about__mission__title">
-        <span>Наша </span> <span>Команда</span>
+        <span>{{ $t("about__team__1") }} </span>
+        <span>{{ $t("about__team__2") }}</span>
       </div>
       <div class="about__team__body">
-        Вселенная Open Turkistan оживает благодаря невероятной энергии и таланту нашей прекрасной команды. Мы — группа
-        страстных и преданных профессионалов, которые объединили свои уникальные навыки и знания для создания виртуального
-        пространства, где история, культура и инновации соединяются в единое целое.
+        {{ $t("about__team__body") }}
       </div>
       <div class="about__team__img">
         <div class="about__team__img__first">
-          <img src="@\assets\About\team1.png" alt="">
+          <img src="@\assets\About\team1.png" alt="" />
         </div>
         <div class="about__team__img__second">
-          <img src="@\assets\About\team2.png" alt="">
-          <img src="@\assets\About\team3.png" alt="">
+          <img src="@\assets\About\team2.png" alt="" />
+          <img src="@\assets\About\team3.png" alt="" />
         </div>
       </div>
-
     </div>
     <div class="about__feedback">
       <div class="about__feedback__title _container">
-        <span>Отзывы</span>
+        <span>{{ $t("about__mission__rev") }}</span>
       </div>
       <div class="about__feedback__reviews">
         <div class="about__feedback__reviews__recalls">
           <div class="about__feedback__reviews__recalls__img">
-            <img src="@\assets\About\avatar.png" alt="">
+            <img src="@\assets\About\avatar.png" alt="" />
             <span>Мария Гунина</span>
           </div>
-          <div class="about__feedback__text">Open Turkistan стал моим виртуальным проводником в удивительный мир
-            Туркестана. Благодаря этой платформе я
-            обогатила свои знания и почувствовала уникальную атмосферу этого региона. Спасибо за потрясающее путешествие!
+          <div class="about__feedback__text">
+            Open Turkistan стал моим виртуальным проводником в удивительный мир
+            Туркестана. Благодаря этой платформе я обогатила свои знания и
+            почувствовала уникальную атмосферу этого региона. Спасибо за
+            потрясающее путешествие!
           </div>
         </div>
         <div class="about__feedback__reviews__recalls">
           <div class="about__feedback__reviews__recalls__img">
-            <img src="@\assets\About\avatar.png" alt="">
+            <img src="@\assets\About\avatar.png" alt="" />
             <span>Мария Гунина</span>
           </div>
-          <div class="about__feedback__text">Open Turkistan стал моим виртуальным проводником в удивительный мир
-            Туркестана. Благодаря этой платформе я
-            обогатила свои знания и почувствовала уникальную атмосферу этого региона. Спасибо за потрясающее путешествие!
+          <div class="about__feedback__text">
+            Open Turkistan стал моим виртуальным проводником в удивительный мир
+            Туркестана. Благодаря этой платформе я обогатила свои знания и
+            почувствовала уникальную атмосферу этого региона. Спасибо за
+            потрясающее путешествие!
           </div>
         </div>
         <div class="about__feedback__reviews__recalls">
           <div class="about__feedback__reviews__recalls__img">
-            <img src="@\assets\About\avatar.png" alt="">
+            <img src="@\assets\About\avatar.png" alt="" />
             <span>Мария Гунина</span>
           </div>
-          <div class="about__feedback__text">Open Turkistan стал моим виртуальным проводником в удивительный мир
-            Туркестана. Благодаря этой платформе я
-            обогатила свои знания и почувствовала уникальную атмосферу этого региона. Спасибо за потрясающее путешествие!
+          <div class="about__feedback__text">
+            Open Turkistan стал моим виртуальным проводником в удивительный мир
+            Туркестана. Благодаря этой платформе я обогатила свои знания и
+            почувствовала уникальную атмосферу этого региона. Спасибо за
+            потрясающее путешествие!
           </div>
         </div>
       </div>
@@ -126,11 +128,20 @@
             </p>
 
             <form action="" class="section__feedback__item__form">
-              <input type="text" class="section__feedback__item__form__input"
-                :placeholder="$t('feedback__input__1')" />
-              <input type="text" class="section__feedback__item__form__input"
-                :placeholder="$t('feedback__input__2')" />
-              <button type="submit" class="section__feedback__item__form__submit regular__btn">
+              <input
+                type="text"
+                class="section__feedback__item__form__input"
+                :placeholder="$t('feedback__input__1')"
+              />
+              <input
+                type="text"
+                class="section__feedback__item__form__input"
+                :placeholder="$t('feedback__input__2')"
+              />
+              <button
+                type="submit"
+                class="section__feedback__item__form__submit regular__btn"
+              >
                 {{ $t("feedback__action") }}
               </button>
             </form>
@@ -153,8 +164,8 @@
   <FooterComponent />
 </template>
 <script setup>
-import FooterComponent from '@/components/FooterComponent.vue';
-import MenuComponent from '@/components/MenuComponent.vue';
+import FooterComponent from "@/components/FooterComponent.vue";
+import MenuComponent from "@/components/MenuComponent.vue";
 </script>
 
 
@@ -216,7 +227,7 @@ import MenuComponent from '@/components/MenuComponent.vue';
 
       &__link {
         text-decoration: none;
-        color: #F07522;
+        color: #f07522;
       }
     }
 
@@ -231,23 +242,23 @@ import MenuComponent from '@/components/MenuComponent.vue';
       }
 
       &:first-child {
-        background: #F07522;
+        background: #f07522;
         color: white;
-        border: 2px solid #F07522;
+        border: 2px solid #f07522;
 
         &:hover {
-          color: #F07522;
+          color: #f07522;
           background: white;
         }
       }
 
       &:last-child {
         background: white;
-        border: 2px solid #F07522;
-        color: #F07522;
+        border: 2px solid #f07522;
+        color: #f07522;
 
         &:hover {
-          background: #F07522;
+          background: #f07522;
           color: white;
         }
       }
@@ -262,9 +273,9 @@ import MenuComponent from '@/components/MenuComponent.vue';
         margin-bottom: 30px;
       }
       @media (max-width: 600px) {
-          gap: 13px;
-          flex-direction: column;
-        }
+        gap: 13px;
+        flex-direction: column;
+      }
     }
 
     &__numbers {
@@ -296,7 +307,7 @@ import MenuComponent from '@/components/MenuComponent.vue';
         }
 
         &:last-child {
-          color: #B3B3B3;
+          color: #b3b3b3;
           font-size: 20px;
           font-weight: 600;
 
@@ -306,8 +317,6 @@ import MenuComponent from '@/components/MenuComponent.vue';
         }
       }
     }
-
-
 
     &__info {
       display: flex;
@@ -382,7 +391,7 @@ import MenuComponent from '@/components/MenuComponent.vue';
       }
       @media (max-width: 400px) {
         width: 100%;
-        }
+      }
 
       img {
         position: absolute;
@@ -427,9 +436,8 @@ import MenuComponent from '@/components/MenuComponent.vue';
         @media (max-width: 768px) {
           font-size: 25px;
           font-weight: 600;
-          line-height: 35px
+          line-height: 35px;
         }
-
 
         &:first-child {
           color: var(--secondary-color);
@@ -440,7 +448,6 @@ import MenuComponent from '@/components/MenuComponent.vue';
         }
       }
     }
-
   }
 
   &__team {
@@ -477,7 +484,7 @@ import MenuComponent from '@/components/MenuComponent.vue';
       display: flex;
       gap: 20px;
       @media (max-width: 600px) {
-       gap: 10px;
+        gap: 10px;
       }
 
       img {
@@ -497,7 +504,6 @@ import MenuComponent from '@/components/MenuComponent.vue';
         }
       }
     }
-
   }
 
   &__feedback {
@@ -542,7 +548,6 @@ import MenuComponent from '@/components/MenuComponent.vue';
     }
 
     &__reviews {
-
       display: flex;
       gap: 25px;
 
@@ -554,7 +559,7 @@ import MenuComponent from '@/components/MenuComponent.vue';
         color: var(--secondary-color);
         padding: 38px 30px 27px 30px;
         border-radius: 20px;
-        border: 1px solid #F07522;
+        border: 1px solid #f07522;
         background: var(--primary-color);
 
         @media (max-width: 768px) {
@@ -584,4 +589,5 @@ import MenuComponent from '@/components/MenuComponent.vue';
       }
     }
   }
-}</style>
+}
+</style>
