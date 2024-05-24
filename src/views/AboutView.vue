@@ -20,7 +20,7 @@
             {{ $t("about__connect") }}
           </button>
         </div>
-        <div class="about__statistics__numbers">
+        <!-- <div class="about__statistics__numbers">
           <div class="about__statistics__item">
             <span>10 лет</span> <span>На рынке</span>
           </div>
@@ -30,7 +30,7 @@
           <div class="about__statistics__item">
             <span>40000</span> <span>Клиентов</span>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="about__statistics__img">
         <img src="@\assets\About\statistic.png" alt="" />
