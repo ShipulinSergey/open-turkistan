@@ -1,12 +1,12 @@
 {
-  "nav__link__1": "БІЗ ТУРАЛЫ",
-  "nav__link__2": "ҚОНАҚ УЙЛЕР",
-  "nav__link__3": "МАҚСАТ",
+  "nav__link__1": "ABOUT",
+  "nav__link__2": "HOTELS",
+  "nav__link__3": "DESTINATION",
   "nav__link__4": "OPENTURKISTANTV",
   "nav__link__5": "CONTACTS",
   "nav__link__6": "3D ТУР",
   "nav__link__7": "GASTROCITY",
-  "nav__link__8": "ҚЫЗМЕТ",
+  "nav__link__8": "SERVICE",
 
   "destination__title": "Destinations of Turkestan",
   "destination__body": "The city is full of historical attractions and monuments, but also boasts many fashion boutiques, stylish restaurants and designer stores. The city is feeling chic, embracing a new coolness",
@@ -14,8 +14,8 @@
   "impression__title__2": "from Turkestan",
   "impression__subtitle": "This transcontinental metropolis is a melting pot of booming culture, a mix of culinary celebrations, art and architecture, separated by the awe-inspiring Bosphorus Strait, which you won't want to miss.",
 
-  "accom__title": "Готовы к незабываемому отдыху?",
-  "accom__subtitle": "Выберите идеальный отель для брони прямо сейчас!",
+  "accom__title": "Are you ready for an unforgettable vacation?",
+  "accom__subtitle": "Choose the perfect hotel to book now!",
 
   "contacts__title__1": "Sales department",
   "contacts__title__2": "Those. support",
@@ -30,5 +30,32 @@
   "contacts__addres": "City of Turkestan, Regional administrative and business center, 160 block, House Administration",
 
   "contacts__line__1": "First line",
-  "contacts__line__2": "Second line"
+  "contacts__line__2": "Second line",
+  
+  "destination__title__1": "Destinations of",
+  "destination__title__2": "Turkestan",
+  "destination__subtitle": "The city is full of historical attractions and monuments, but also boasts many fashion boutiques, stylish restaurants and designer stores. The city is feeling chic, embracing a new coolness",
+
+  "footer__rights__1": "Авторское право ©",
+  "footer__rights__2": " Туркестан. Все права защищены TGA",
+  "footer__politics__1": "Политика в отношении файлов cookie",
+  "footer__politics__2": "Политика Конфиденциальности",
+
+
+
+  "about__title__1": "Открой для себя великолепие Open",
+  "about__title__2": "Turkistan",
+  "about__title__3": "история, культура и современность в едином пространстве возможностей!",
+
+
+  "about__mission__1": "Our ",
+  "about__mission__2": "mission",
+  "about__mission__body": "At Open Turkistan, we strive to be an inspiring center that brings together rich heritage and modern trends. Our mission is to reveal the uniqueness of Turkestan, provide a platform for the exchange of ideas and admiration of cultural diversity. We work to stimulate interest and love for the history, art and contemporary dynamics of this beautiful region. With Open Turkistan, everyone can discover an endless source of inspiration and understanding",
+
+  "about__team__1": "Our",
+  "about__team__2": "team",
+  "about__team__body": "The Open Turkistan universe comes alive thanks to the incredible energy and talent of our wonderful team. We are a group of passionate and dedicated professionals who have combined our unique skills and knowledge to create a virtual space where history, culture and innovation come together into one.",
+
+  "about__mission__rev": "Reviews"
+
 }

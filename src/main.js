@@ -18,12 +18,14 @@ import { createI18n } from "vue-i18n";
 //npm install vue-i18n@next
 import RU from "./locales/ru.json";
 import KZ from "./locales/kz.json";
+import EN from "./locales/en.json";
 
 import store from './store';
 
 const messages = {
   RU,
   KZ,
+  EN
 };
 
 const i18n = createI18n({
