@@ -69,7 +69,7 @@
         </div>
       </div>
     </div>
-    <div class="about__feedback">
+    <!-- <div class="about__feedback">
       <div class="about__feedback__title _container">
         <span>{{ $t("about__mission__rev") }}</span>
       </div>
@@ -114,7 +114,7 @@
       <div class="about__feedback__cursor">
         <button></button>
       </div>
-    </div>
+    </div> -->
     <div class="section__feedback" id="feedback">
       <div class="section__feedback__content _container">
         <div class="section__feedback__row section__row">

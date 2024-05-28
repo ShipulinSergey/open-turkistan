@@ -96,10 +96,10 @@
                     :theme="theme === 'dark' ? 'dark' : 'light'"
                   >
                     <v-list-item value="2" @click="goTo('/photos')">
-                      <v-list-item-title>Фотогалерея</v-list-item-title>
+                      <v-list-item-title>{{ $t('photo_gallery') }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item value="3" @click="goTo('/videos')">
-                      <v-list-item-title>Видеогалерея</v-list-item-title>
+                      <v-list-item-title>{{ $t('video_gallery') }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item value="1" @click="goTo('/360')">
                       <v-list-item-title>OpenTurkistan 360</v-list-item-title>
