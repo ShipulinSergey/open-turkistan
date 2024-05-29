@@ -8,6 +8,8 @@
   "nav__link__7": "GASTROCITY",
   "nav__link__8": "SERVICE",
 
+  "header__subtitle": "The city located in southern Kazakhstan, near the Syr Darya River. Since June 19, 2018, it has been the administrative center of Turkistan Region (previously known as South Kazakhstan Region). It is one of the oldest cities in Kazakhstan, situated 160 km northwest of Shymkent on the Tashkent railway between Kyzylorda and Tashkent. The city is one of the places for Muslim pilgrimage.",
+
   "destination__title": "Destinations of Turkistan",
   "destination__body": "The city is full of historical attractions and monuments, but also boasts many fashion boutiques, stylish restaurants and designer stores. The city is feeling chic, embracing a new coolness",
   "impression__title__1": "Impressions",
@@ -44,8 +46,8 @@
 
 
   "about__title__1": "Discover the splendor of Open",
-  "about__title__2": "Turkistan",
-  "about__title__3": "history, culture and modernity in a single space of possibilities!",
+  "about__title__2": "Turkistan:",
+  "about__title__3": "history, culture, and modernity in a unified space of possibilities!",
 
 
   "about__mission__1": "Our ",
@@ -64,6 +66,9 @@
   "video_gallery": "Video gallery",
 
   "about__application": "submit your application",
-  "about__connect": "contact us"
+  "about__connect": "contact us",
 
+  "feedback__title__1": "Go to",
+  "feedback__title__2": "Turkistan",
+  "feedback__subtitle": "Don't postpone your vacation! Leave an application, our managers will consult you on current tours, conditions, and opportunities."
 }

@@ -61,11 +61,11 @@
       </div>
       <div class="about__team__img">
         <div class="about__team__img__first">
-          <img src="@\assets\About\team1.png" alt="" />
+          <img src="@\assets\About\1.jpg" alt="" />
         </div>
         <div class="about__team__img__second">
-          <img src="@\assets\About\team2.png" alt="" />
-          <img src="@\assets\About\team3.png" alt="" />
+          <img src="@\assets\About\5.jpg" alt="" />
+          <img src="@\assets\About\3.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -192,6 +192,9 @@ import MenuComponent from "@/components/MenuComponent.vue";
     &__img {
       img {
         width: 100%;
+        max-height: 700px;
+        max-width: 545px;
+        height: 100%;
       }
     }
 
@@ -490,11 +493,25 @@ import MenuComponent from "@/components/MenuComponent.vue";
       img {
         width: 100%;
       }
-
+      &__first {
+        max-width: calc(50% - 25px);
+        min-height: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+      }
       &__second {
         display: flex;
         flex-direction: column;
         gap: 25px;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          border-radius: 4px;
+        }
 
         @media (max-width: 768px) {
           gap: 13px;
