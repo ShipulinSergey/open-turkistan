@@ -21,8 +21,8 @@
             {{ $t("contacts__offline") }}
           </div>
           <div class="contacts__item__text">{{ $t("contacts__line__1") }}</div>
-          <a href="tel:+77299233212" class="contacts__item__phone"
-            >+7 (729) 923 - 32 -12</a
+          <a href="tel:+77071862843" class="contacts__item__phone"
+            >+7 (775) 490 - 36 - 96</a
           >
           <div class="contacts__item__text">{{ $t("contacts__line__2") }}</div>
           <a href="tel:+77299233212" class="contacts__item__phone"
@@ -43,26 +43,32 @@
           <div class="contacts__item__badge online" v-if="isWorkingHours">
             {{ $t("contacts__online") }}
           </div>
-          <div class="contacts__item__badge" v-else>{{ $t("contacts__offline") }}</div>
+          <div class="contacts__item__badge" v-else>
+            {{ $t("contacts__offline") }}
+          </div>
           <div class="contacts__item__text">{{ $t("contacts__line__1") }}</div>
           <a href="tel:+77299233212" class="contacts__item__phone"
-            >+7 (729) 923 - 32 -12</a
+            >+7 (747) 903 - 20 - 02</a
           >
           <div class="contacts__item__text">{{ $t("contacts__line__2") }}</div>
           <a href="tel:+77299233212" class="contacts__item__phone"
             >+7 (729) 923 - 32 -12</a
           >
-          <a href="mailto:support@openturkistan.kz" class="contacts__item__mail"
+          <a
+            href="mailto:open.turkistan22@gmail.com"
+            class="contacts__item__mail"
             ><img
               src="@\assets\icons\mail.svg"
               alt=""
-            />support@openturkistan.kz</a
+            />open.turkistan22@gmail.com</a
           >
         </div>
 
         <div class="contacts__item">
           <div class="contacts__item__header">
-            <div class="contacts__item__title">{{ $t("contacts__title__3") }}</div>
+            <div class="contacts__item__title">
+              {{ $t("contacts__title__3") }}
+            </div>
             <div class="contacts__item__icon">
               <img src="@\assets\icons\build.png" alt="" />
             </div>
@@ -71,16 +77,16 @@
             class="contacts__item__title"
             style="font-weight: 500; margin-bottom: 15px"
           >
-          {{ $t("contacts__time__3") }}
+            {{ $t("contacts__time__3") }}
           </div>
           <div class="contacts__item__phone" style="margin-bottom: 13px">
             {{ $t("contacts__addres") }}
           </div>
           <div class="contacts__item__phone" style="margin-bottom: 13px">
-            08:00 - 21:00
+            09:00 - 19:00
           </div>
           <a href="tel:+77071862843" class="contacts__item__phone"
-            >+7 (729) 923 - 32 -12</a
+            >+7 (747) 545 - 60 - 12</a
           >
           <div class="spacer"></div>
 
@@ -107,7 +113,7 @@ const checkWorkingHours = () => {
   const hours = now.getHours();
 
   const isWeekday = dayOfWeek >= 1 && dayOfWeek <= 6;
-  const isWorkingTime = hours >= 8 && hours < 22;
+  const isWorkingTime = hours >= 9 && hours < 20;
 
   isWorkingHours.value = isWeekday && isWorkingTime;
 };

@@ -397,24 +397,48 @@ import MenuComponent from "@/components/MenuComponent.vue";
       }
 
       img {
+        object-fit: cover;
         position: absolute;
-
-        @media (max-width: 768px) {
-          width: 75%;
-        }
-
-        @media (max-width: 600px) {
-          width: 55%;
-        }
-
+        border-radius: 20px;
         &:first-child {
           right: 0;
           top: 0;
+          max-width: 334px;
+          height: 501px;
         }
 
         &:last-child {
           bottom: 0;
           left: 0;
+          max-width: 277px;
+          height: 388px;
+        }
+
+        @media (max-width: 768px) {
+          &:first-child {
+            max-width: 200px;
+            height: 300px;
+          }
+          &:last-child {
+            max-width: 150px;
+            height: 250px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          &:first-child {
+            max-width: 300px;
+            height: 400px;
+          }
+          &:last-child {
+            max-width: 200px;
+            height: 300px;
+          }
+        }
+        @media (max-width: 400px) {
+          &:last-child {
+            display: none;
+          }
         }
       }
     }
